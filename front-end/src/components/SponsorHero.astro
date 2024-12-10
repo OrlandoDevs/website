@@ -1,0 +1,37 @@
+---
+import sponsorData from "../data/sponsors.json";
+import type SponsorProps from "../interfaces/SponsorInterfaces";
+const sponsors: SponsorProps[] = sponsorData.sponsors;
+---
+
+<div class="my-16">
+  <h2
+    class="text-center text-5xl font-bold pb-20 bg-gradient-to-r from-white to-cyan-300 text-transparent bg-clip-text"
+  >
+    Thank you to our community sponsors!
+  </h2>
+  <div
+    class="grid grid-cols-[200px_200px] gap-5 lg:grid-cols-[200px_200px_200px] lg:grid-rows-[200px_200px_200px] justify-center justify-items-stretch items-stretch"
+  >
+    {
+      sponsors.map((sponsor) => (
+        <div
+          data-id={sponsor.id}
+          class="rounded-sm bg-slate-100 shadow-xl shadow-slate-600"
+        >
+          <a href={sponsor.link} target="_blank">
+            <figure class="px-3 py-3">
+              <img
+                src={sponsor.image}
+                alt={sponsor.name}
+                class="object-contain w-full h-40"
+              />
+            </figure>
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<!-- class="grid grid-cols-[200px_200px] gap-4 lg:grid-cols-[200px_200px_200px] lg:grid-rows-[200px_200px_200px] justify-center justify-items-stretch items-stretch bg-[url('/images/space.jpg')] bg-cover bg-center bg-no-repeat py-3" -->

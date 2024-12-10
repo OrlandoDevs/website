@@ -1,0 +1,28 @@
+{
+  "boardDirectors": [
+    {
+      "id": 1,
+      "name": "Brian Rinaldi",
+      "title": "President",
+      "role": "Developer Experience Engineer at LaunchDarkly",
+      "link": "linkedIn Link",
+      "image": "/images/male-image-placeholder.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Caitlin Augustin",
+      "title": "Vice President",
+      "role": "VP of Product and Programs at DataKind",
+      "link": "linkedIn Link",
+      "image": "/images/female-image-placeholder.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Jacques Fu",
+      "title": "Treasurer",
+      "role": "Co-Founder of Staxx and Beam.gg",
+      "link": "linkedIn Link",
+      "image": "/images/male-image-placeholder.jpg"
+    }
+  ]
+}

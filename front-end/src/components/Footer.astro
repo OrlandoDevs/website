@@ -1,0 +1,53 @@
+---
+import { FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagramSquare } from "react-icons/fa";
+---
+
+<footer class="footer bg-[#011c28] p-10 text-slate-300">
+  <aside>
+    <img src="./images/footer-odev.png" alt="Odevs" class="h-11 mb-3" />
+    <p class="text-pretty">
+      Orlando Devs
+      <br />
+      Official website for the Orlando Devs Community!
+      <br />
+      We are an inclusive community, open to everyone
+      <br />
+      who has a passion in software development in the
+      <br />
+      Orlando area.
+    </p>
+  </aside>
+  <nav>
+    <h6 class="footer-title">Learn More</h6>
+    <a class="link link-hover" href="/about">Who are the Odevs?</a>
+    <a class="link link-hover" href="/codeofconduct">Code Of Conduct</a>
+    <a class="link link-hover" href="/slack">Odevs Slack</a>
+    <a class="link link-hover" href="/events">Odevs Meetup</a>
+  </nav>
+  <nav class="flex flex-col">
+    <h6 class="footer-title">Social Media</h6>
+    <a
+      class="link link-hover flex items-center gap-2"
+      href="https://x.com/OrlandoDevs/"
+      target="_blank"
+    >
+      <FaXTwitter style={{ fontSize: "25px" }} /> X
+    </a>
+    <a
+      class="link link-hover flex items-center gap-2"
+      href="https://github.com/OrlandoDevs"
+      target="_blank"
+    >
+      <FaGithub style={{ fontSize: "25px" }} /> GitHub
+    </a>
+    <a
+      class="link link-hover flex items-center gap-2"
+      href="https://www.instagram.com/orlandodevs/?hl=en"
+      target="_blank"
+    >
+      <FaInstagramSquare style={{ fontSize: "25px" }} /> Instagram
+    </a>
+  </nav>
+</footer>

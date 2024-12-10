@@ -1,0 +1,44 @@
+{
+  "groups": [
+    {
+      "id": 1,
+      "name": "Orlando Devs"
+    },
+    {
+      "id": 2,
+      "name": "Orlando DevOps"
+    },
+    {
+      "id": 3,
+      "name": "Orlando Innovation League"
+    },
+    {
+      "id": 4,
+      "name": "OrlandoJS"
+    },
+    {
+      "id": 5,
+      "name": "Orlando PHP"
+    },
+    {
+      "id": 6,
+      "name": "Codex"
+    },
+    {
+      "id": 7,
+      "name": "Lady Devs"
+    },
+    {
+      "id": 8,
+      "name": "Frontend Devs"
+    },
+    {
+      "id": 9,
+      "name": "Open Orlando"
+    },
+    {
+      "id": 10,
+      "name": "IOS"
+    }
+  ]
+}

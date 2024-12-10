@@ -1,0 +1,39 @@
+---
+import sponsorData from "../data/sponsors.json";
+import type SponsorProps from "../interfaces/SponsorInterfaces";
+const sponsors: SponsorProps[] = sponsorData.sponsors;
+---
+
+{
+  sponsors.map((sponsor) => (
+    <div
+      class="flex flex-col lg:flex-row items-center shadow-lg border-2 border-solid border-[#ABA1A1] rounded-lg text-center h-96 shadow-slate-700 "
+      data-id={sponsor.id}
+    >
+      <div class="flex justify-center grow-0 lg:justify-start lg:px-6 lg:py-4 pt-10 pb-4">
+        <img
+          src={sponsor.image}
+          alt={sponsor.name}
+          class="object-fit w-full h-40 max-h-40 max-w-72 lg:object-contain lg:w-80 lg:h-48 p-3 lg:px-5 bg-white rounded-lg"
+        />
+      </div>
+      <div class="flex flex-col items-center lg:pr-3">
+        <div>
+          <div class="text-slate-200 text-4xl text-nowrap pt-5 pb-3 lg:border-b-2 border-solid">
+            {sponsor.name}
+          </div>
+          <div class="text-lg text-slate-300 hidden lg:flex text-justify m-3 pb-6">
+            {sponsor.description}
+          </div>
+        </div>
+        <div class="lg:mb-4">
+          <a href={sponsor.link} target="_blank">
+            <button class="btn bg-[#2c9db1] text-white border-none text-nowrap">
+              Learn more about {sponsor.name}
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  ))
+}

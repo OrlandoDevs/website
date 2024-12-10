@@ -1,0 +1,22 @@
+---
+import advisorsData from "../data/boardOfAdvisors.json";
+import type BoardOfAdvisorsProps from "../interfaces/BoardOfAdvisorsInterfaces";
+const advisors: BoardOfAdvisorsProps[] = advisorsData.advisors;
+---
+
+{
+  advisors.map((member) => (
+    <div
+      data-id={member.id}
+      class="card bg-glass w-full lg:w-64 shadow-lg text-slate-200 shadow-slate-600"
+    >
+      <figure class="px-10 pt-10">
+        <img src={member.image} alt="Member" class="rounded-xl" />
+      </figure>
+      <div class="card-body items-center text-center">
+        <h2 class="card-title text-2xl font-bold text-nowrap">{member.name}</h2>
+        <p class="text-sm">{member.role}</p>
+      </div>
+    </div>
+  ))
+}
