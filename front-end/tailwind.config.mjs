@@ -9,6 +9,11 @@ export default {
         // sans: ["Roboto", ...defaultTheme.fontFamily.sans],
         serif: ["IBM Plex Serif", ...defaultTheme.fontFamily.serif],
       },
+      backgroundImage: {
+        "custom-image": "url('/images/customBG.svg')",
+        "custom-back-ground": "url('/images/pattern-randomized.svg')",
+        "custom-back-ground-two": "url('/images/pattern-randomized-two.svg')",
+      },
     },
   },
   plugins: [require("daisyui")],

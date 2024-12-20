@@ -6,7 +6,7 @@ import BoardOfAdvisorsCard from "../components/BoardOfAdvisorsCard.astro";
 
 <MainLayout title="Who we are">
   <div
-    class="border-2 border-solid border-[#ABA1A1] rounded-lg p-6 shadow-2xl mb-7 text-slate-300 text-xl mx-6 bg-[#011c28]"
+    class="border-2 border-solid border-[#ABA1A1] rounded-lg p-6 shadow-2xl mb-7 text-slate-300 text-xl mx-6 bg-custom-back-ground"
   >
     <h1
       class="bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text text-7xl text-center border-b-2 border-solid border-[#ABA1A1]"
@@ -14,11 +14,16 @@ import BoardOfAdvisorsCard from "../components/BoardOfAdvisorsCard.astro";
       Who Are The ODevs?
     </h1>
     <section class="my-8">
-      <div
-        class="flex flex-col lg:flex-row px-2 gap-6 items-center lg:items-center"
-      >
+      <div class="flex flex-col px-2 gap-6 items-center">
+        <div class="flex-1">
+          <img
+            src="/images/odevs-about.jpg"
+            class="rounded-lg w-full order-1 lg:order-2 lg:mb-10"
+            alt="ODevs"
+          />
+        </div>
         <div
-          class="flex-1 lg:text-justify text-xl text-slate-200 order-2 lg:order-1 text-left"
+          class="flex-auto lg:text-center text-xl text-slate-200 order-2 lg:order-1 text-left leading-relaxed"
         >
           <p>
             Orlando Devs is an Orlando-area wide community focused on growing
@@ -41,16 +46,16 @@ import BoardOfAdvisorsCard from "../components/BoardOfAdvisorsCard.astro";
             Orlando Devs is a 501(c)(3) non-profit organization.
           </p>
         </div>
-        <div class="flex-1">
+        <!-- <div class="flex-1">
           <img
             src="/images/odevs-about.jpg"
             class="rounded-lg w-full order-1 lg:order-2"
             alt="ODevs"
           />
-        </div>
+        </div> -->
       </div>
       <h1
-        class="mt-16 text-center text-6xl bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"
+        class="mt-16 lg:mt-72 text-center text-6xl bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"
       >
         Orlando Devs Board of Directors
       </h1>
@@ -58,7 +63,7 @@ import BoardOfAdvisorsCard from "../components/BoardOfAdvisorsCard.astro";
         <BoardOfDirectorsCard />
       </div>
       <h1
-        class="mt-16 text-center text-5xl bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"
+        class="mt-16 lg:mt-72 text-center text-5xl bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"
       >
         Orlando Devs Board of Advisors
       </h1>
@@ -68,7 +73,7 @@ import BoardOfAdvisorsCard from "../components/BoardOfAdvisorsCard.astro";
         <BoardOfAdvisorsCard />
       </div>
       <h1
-        class="mt-16 text-center text-4xl bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"
+        class="mt-16 text-center text-4xl bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text lg:mt-72"
       >
         Former Orlando Devs Board Members
       </h1>

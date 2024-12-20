@@ -4,9 +4,9 @@ import type SponsorProps from "../interfaces/SponsorInterfaces";
 const sponsors: SponsorProps[] = sponsorData.sponsors;
 ---
 
-<div class="my-16">
+<div class="py-16 relative my-32">
   <h2
-    class="text-center text-5xl font-bold pb-20 bg-gradient-to-r from-white to-cyan-300 text-transparent bg-clip-text"
+    class="text-center text-5xl font-bold pb-5 mb-32 bg-gradient-to-r from-white to-cyan-300 text-transparent bg-clip-text"
   >
     Thank you to our community sponsors!
   </h2>
@@ -17,14 +17,17 @@ const sponsors: SponsorProps[] = sponsorData.sponsors;
       sponsors.map((sponsor) => (
         <div
           data-id={sponsor.id}
-          class="rounded-sm bg-slate-100 shadow-xl shadow-slate-600"
+          class="rounded-sm bg-slate-200 shadow-xl shadow-slate-700"
         >
-          <a href={sponsor.link} target="_blank">
+          <a href={sponsor.link} target="_blank" class="relative block group">
+            <p class="absolute inset-0 flex items-center justify-center text-black text-2xl font-bold opacity-0 transition-opacity group-hover:opacity-100 z-10">
+              {sponsor.name}
+            </p>
             <figure class="px-3 py-3">
               <img
                 src={sponsor.image}
                 alt={sponsor.name}
-                class="object-contain w-full h-40"
+                class="object-contain w-full h-40 transition-all group-hover:filter group-hover:grayscale-[70%] group-hover:blur-xl"
               />
             </figure>
           </a>
@@ -32,6 +35,9 @@ const sponsors: SponsorProps[] = sponsorData.sponsors;
       ))
     }
   </div>
+  <img
+    src="/images/customBG.svg"
+    alt="svg"
+    class="w-screen lg:-bottom-36 lg:w-2/3 rounded-full absolute -z-10 lg:left-0"
+  />
 </div>
-
-<!-- class="grid grid-cols-[200px_200px] gap-4 lg:grid-cols-[200px_200px_200px] lg:grid-rows-[200px_200px_200px] justify-center justify-items-stretch items-stretch bg-[url('/images/space.jpg')] bg-cover bg-center bg-no-repeat py-3" -->
