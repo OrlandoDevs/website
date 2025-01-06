@@ -1,10 +1,12 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { fade } from "astro:transitions";
 ---
 
 <MainLayout title="Join Our Slack!">
   <div
     class="border-2 border-solid border-[#ABA1A1] rounded-lg p-6 shadow-2xl mb-7 text-slate-300 text-xl mx-6 bg-custom-back-ground"
+    transition:animate={fade({ duration: "0.8s" })}
   >
     <h2
       class="bg-gradient-to-r from-cyan-300 to-white pb-2 text-transparent bg-clip-text text-5xl text-center border-b-2 border-solid border-[#ABA1A1]"

@@ -60,34 +60,64 @@ function NavBar() {
               <FaCaretDown className="text-white" />
             </div>
             <div className="dropdown-content flex flex-col items-start text-center bg-[rgba(255, 255, 255, 0.2)] backdrop-blur-2xl rounded-box z-[1] shadow text-slate-200 font-bold text-xl p-4 cursor-pointer mt-5 w-auto gap-2">
-              <a className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap">
+              <a
+                className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap"
+                href="/groups/orlando-devs"
+              >
                 Orlando Devs
               </a>
-              <a className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap">
+              <a
+                className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap"
+                href="/groups/orlando-devops"
+              >
                 Orlando DevOps
               </a>
-              <a className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap">
+              <a
+                className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap"
+                href="/groups/orlando-innovation-league"
+              >
                 Orlando Innovation League
               </a>
-              <a className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap">
+              <a
+                className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap"
+                href="/groups/orlando-js"
+              >
                 OrlandoJS
               </a>
-              <a className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap">
+              <a
+                className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap"
+                href="/groups/orlando-php"
+              >
                 Orlando PHP
               </a>
-              <a className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap">
+              <a
+                className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap"
+                href="/groups/codex"
+              >
                 Codex
               </a>
-              <a className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap">
+              <a
+                className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap"
+                href="/groups/lady-devs"
+              >
                 Lady Devs
               </a>
-              <a className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap">
+              <a
+                className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap"
+                href="/groups/frontend-devs"
+              >
                 Frontend Devs
               </a>
-              <a className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap">
+              <a
+                className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap"
+                href="/groups/open-orlando"
+              >
                 Open Orlando
               </a>
-              <a className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap">
+              <a
+                className="py-1 px-2 w-full hover:glass hover:text-black transition ease-in-out rounded text-nowrap"
+                href="/groups/ios"
+              >
                 IOS
               </a>
               <a

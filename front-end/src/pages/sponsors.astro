@@ -1,11 +1,13 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import SponsorList from "../components/SponsorList.astro";
+import { fade } from "astro:transitions";
 ---
 
 <MainLayout title="Sponsors">
   <div
-    class="border-2 border-solid border-[#ABA1A1] rounded-lg p-6 shadow-2xl mb-7 text-slate-300 text-xl mx-6 bg-custom-back-ground"
+    class="border-2 border-solid border-[#ABA1A1] rounded-lg p-6 shadow-2xl mb-7 text-slate-300 text-xl mx-6 bg-[#011C28]"
+    transition:animate={fade({ duration: "0.8s" })}
   >
     <h1
       class="text-center text-5xl lg:text-7xl border-b-2 border-[#ABA1A1] py-3 bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"

@@ -1,7 +1,9 @@
 ---
+import { shuffleArray } from "../utils/shuffleArray";
 import sponsorData from "../data/sponsors.json";
 import type SponsorProps from "../interfaces/SponsorInterfaces";
 const sponsors: SponsorProps[] = sponsorData.sponsors;
+const shuffledSponsors = shuffleArray(sponsors);
 ---
 
 <div class="py-16 relative my-32">
@@ -11,29 +13,39 @@ const sponsors: SponsorProps[] = sponsorData.sponsors;
     Thank you to our community sponsors!
   </h2>
   <div
+    class="lg:bg-[#2C9DB1] lg:h-20 hidden lg:block lg:w-20 lg:p-5 lg:absolute lg:-top-2 lg:right-48"
+  >
+    <img src="images/message-heart-square.svg" />
+  </div>
+  <div
     class="grid grid-cols-[200px_200px] gap-5 lg:grid-cols-[200px_200px_200px] lg:grid-rows-[200px_200px_200px] justify-center justify-items-stretch items-stretch"
   >
     {
-      sponsors.map((sponsor) => (
+      shuffledSponsors.map((sponsor) => (
         <div
           data-id={sponsor.id}
           class="rounded-sm bg-slate-200 shadow-xl shadow-slate-700"
         >
           <a href={sponsor.link} target="_blank" class="relative block group">
-            <p class="absolute inset-0 flex items-center justify-center text-black text-2xl font-bold opacity-0 transition-opacity group-hover:opacity-100 z-10">
+            <p class="absolute inset-0 flex items-center justify-center text-black text-2xl font-bold opacity-0 transition-opacity group-hover:opacity-100 z-10 duration-700 ease-in-out">
               {sponsor.name}
             </p>
             <figure class="px-3 py-3">
               <img
                 src={sponsor.image}
                 alt={sponsor.name}
-                class="object-contain w-full h-40 transition-all group-hover:filter group-hover:grayscale-[70%] group-hover:blur-xl"
+                class="object-contain w-full h-40 transition-all group-hover:filter group-hover:grayscale-[70%] group-hover:blur-xl duration-700"
               />
             </figure>
           </a>
         </div>
       ))
     }
+  </div>
+  <div
+    class="lg:bg-[#0E5F7C] hidden lg:block lg:h-40 lg:w-40 lg:p-5 lg:absolute lg:-top-80 lg:left-24"
+  >
+    <img src="images/Icon.svg" class="lg:absolute lg:top-8 lg:left-8" />
   </div>
   <img
     src="/images/customBG.svg"

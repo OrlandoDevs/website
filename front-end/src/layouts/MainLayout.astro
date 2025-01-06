@@ -1,6 +1,8 @@
 ---
 import Footer from "../components/Footer.astro";
 import NavBar from "../ReactComponents/NavBar";
+import { ClientRouter } from "astro:transitions";
+import { slide } from "astro:transitions";
 import "@fontsource/ibm-plex-serif/100.css";
 import "@fontsource/ibm-plex-serif/200.css";
 import "@fontsource/ibm-plex-serif/300.css";
@@ -34,11 +36,13 @@ interface Props {
       integrity="sha512-BJ/5sR2hFxQTKin/55JQCcMTObShDBAmVjL/3NR/MVcrhyOazJjAgvROem03+HYyGw16SVdSfoWCFGr9syxAKA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"></script>
+    <ClientRouter />
 
     <title>{title}</title>
     <link href="./images/footer-odev.png" rel="icon" type="image/x-icon" />
   </head>
-  <body class="font-serif">
+  <body class="font-serif" transition:animate={slide({ duration: "0.8s" })}>
+    <!-- <body class="font-serif" transition:animate={fade({ duration: "0.8s" })}> -->
     <NavBar client:only="react" />
     <section class="w-full">
       <slot />

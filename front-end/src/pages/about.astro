@@ -2,18 +2,20 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import BoardOfDirectorsCard from "../components/BoardOfDirectorsCard.astro";
 import BoardOfAdvisorsCard from "../components/BoardOfAdvisorsCard.astro";
+import { fade } from "astro:transitions";
 ---
 
 <MainLayout title="Who we are">
   <div
-    class="border-2 border-solid border-[#ABA1A1] rounded-lg p-6 shadow-2xl mb-7 text-slate-300 text-xl mx-6 bg-custom-back-ground"
+    class="border-2 border-solid border-[#ABA1A1] rounded-lg p-6 shadow-2xl mb-7 text-slate-300 text-xl mx-6 bg-[#011C28]"
+    transition:animate={fade({ duration: "0.8s" })}
   >
     <h1
-      class="bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text text-7xl text-center border-b-2 border-solid border-[#ABA1A1]"
+      class="bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text text-7xl text-center border-b-2 border-solid border-[#ABA1A1] lg:mt-10"
     >
       Who Are The ODevs?
     </h1>
-    <section class="my-8">
+    <section class="my-8 lg:mt-24">
       <div class="flex flex-col px-2 gap-6 items-center">
         <div class="flex-1">
           <img
@@ -87,11 +89,98 @@ import BoardOfAdvisorsCard from "../components/BoardOfAdvisorsCard.astro";
       </div>
       <div class="pt-8 text-2xl text-center">
         <p>
-          We hope that you will join us soon, be on the Orlando Devs Slack,
-          Orlando Devs Meetup, or all the other software-related meetups
+          We hope you'll join us soon—whether it's on the Orlando Devs Slack,
+          any Orlando Devs meetups, or any of the other software-related meetups
           happening in Orlando. Have a blast! 🚀
         </p>
       </div>
     </section>
   </div>
 </MainLayout>
+
+<!-- ** This is the optional background with the star bg -->
+
+<!-- <MainLayout title="Who we are">
+  <div
+    class="border-2 border-solid border-[#ABA1A1] rounded-lg p-6 shadow-2xl mb-7 text-slate-300 text-xl mx-6 bg-custom-back-ground"
+  >
+    <h1
+      class="bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text text-7xl text-center border-b-2 border-solid border-[#ABA1A1] lg:mt-10"
+    >
+      Who Are The ODevs?
+    </h1>
+    <section class="my-8 lg:mt-24">
+      <div class="flex flex-col px-2 gap-6 items-center">
+        <div class="flex-1">
+          <img
+            src="/images/odevs-about.jpg"
+            class="rounded-lg w-full order-1 lg:order-2 lg:mb-10"
+            alt="ODevs"
+          />
+        </div>
+        <div
+          class="flex-auto lg:text-center text-xl text-slate-200 order-2 lg:order-1 text-left leading-relaxed"
+        >
+          <p>
+            Orlando Devs is an Orlando-area wide community focused on growing
+            and supporting developers at all levels to build their careers in
+            Central Florida. Through the running of regular networking events,
+            training sessions, hackathons, and collaboration events, Orlando
+            Devs works to support developers in skill development and
+            community-building. As a member of Innovate Orlando, the greater
+            technology community of the Orlando area, Orlando Devs fosters
+            collaboration between technologists, entrepreneurs, enterprise
+            businesses, academia, and more. With a keen focus on growing
+            diversity in the technology ecosystem, Orlando Devs supports
+            programming that builds the talent pipeline for women and minorities
+            in technology.
+          </p>
+          <br />
+          <p>
+            Orlando Devs gives back to the community through mentorship, hosted
+            events, and volunteerism to grow the tech community of Orlando.
+            Orlando Devs is a 501(c)(3) non-profit organization.
+          </p>
+        </div>
+      </div>
+      <h1
+        class="mt-16 lg:mt-72 text-center text-6xl bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"
+      >
+        Orlando Devs Board of Directors
+      </h1>
+      <div class="flex flex-col lg:flex-row gap-6 pt-16 justify-center">
+        <BoardOfDirectorsCard />
+      </div>
+      <h1
+        class="mt-16 lg:mt-72 text-center text-5xl bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"
+      >
+        Orlando Devs Board of Advisors
+      </h1>
+      <div
+        class="flex flex-col flex-wrap lg:flex-row gap-6 pt-16 justify-center"
+      >
+        <BoardOfAdvisorsCard />
+      </div>
+      <h1
+        class="mt-16 text-center text-4xl bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text lg:mt-72"
+      >
+        Former Orlando Devs Board Members
+      </h1>
+      <div
+        class="flex flex-col text-center py-4 gap-y-4 text-2xl border-b-2 border-solid border-[#ABA1A1]"
+      >
+        <p>Cassandra Wilcox</p>
+        <p>Jenell Pizarro</p>
+        <p>Matt Burgess</p>
+        <p>Jorge Hernandez</p>
+      </div>
+      <div class="pt-8 text-2xl text-center">
+        <p>
+          We hope you'll join us soon—whether it's on the Orlando Devs Slack,
+          any Orlando Devs meetups, or any of the other software-related meetups
+          happening in Orlando. Have a blast! 🚀
+        </p>
+      </div>
+    </section>
+  </div>
+</MainLayout> -->
