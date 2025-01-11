@@ -1,6 +1,6 @@
 # Largely based on the official Astro action
 # https://docs.astro.build/en/guides/deploy/github/
-name: Deploy to GitHub Pages
+name: Deploy to Netlify Staging
 
 on:
   # Trigger the workflow every time you push to the `main` branch
@@ -16,24 +16,27 @@ permissions:
   id-token: write
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v3
-        with:
-          path: ./front-end
-          node-version: 22
-          package-manager: npm@latest
   deploy:
-    needs: build
+    name: 'Deploy'
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - uses: actions/checkout@v3
+
+      # Sets the branch name as environment variable
+      - uses: nelonoel/branch-name@v1.0.1
+      - uses: jsmrcaga/action-netlify-deploy@v2.0.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          deploy_alias: ${{ env.BRANCH_NAME }}
+      
+      # Creates a status check with link to preview
+      - name: Status check
+        uses: Sibz/github-status-action@v1.1.1
+        with:
+          authToken: ${{ secrets.GITHUB_TOKEN }}
+          context: Netlify preview
+          state: success
+          target_url: ${{ env.NETLIFY_PREVIEW_URL }}
+
