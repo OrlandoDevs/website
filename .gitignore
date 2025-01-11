@@ -1,0 +1,11 @@
+# Local Netlify folder
+.netlify
+
+# Astro build folder
+dist
+
+# node_modules
+node_modules
+
+# `act` secrets file
+.secrets
