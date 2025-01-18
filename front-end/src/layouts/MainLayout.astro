@@ -2,7 +2,7 @@
 import Footer from "../components/Footer.astro";
 import NavBar from "../ReactComponents/NavBar";
 import { ClientRouter } from "astro:transitions";
-import { slide } from "astro:transitions";
+import { fade } from "astro:transitions";
 import "@fontsource/ibm-plex-serif/100.css";
 import "@fontsource/ibm-plex-serif/200.css";
 import "@fontsource/ibm-plex-serif/300.css";
@@ -18,8 +18,12 @@ interface Props {
 }
 ---
 
-<!doctype html>
-<html lang="en" data-theme="pastel" class="bg-[#012638] p-0 m-0">
+<!-- class="bg-[#012638] p-0 m-0" --><!doctype html>
+<html
+  lang="en"
+  data-theme="pastel"
+  class="bg-gradient-to-b from-[#011C28] to-[#012638] p-0 m-0"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,8 +45,8 @@ interface Props {
     <title>{title}</title>
     <link href="./images/footer-odev.png" rel="icon" type="image/x-icon" />
   </head>
-  <body class="font-serif" transition:animate={slide({ duration: "0.8s" })}>
-    <!-- <body class="font-serif" transition:animate={fade({ duration: "0.8s" })}> -->
+
+  <body class="font-serif" transition:animate={fade({ duration: "0.4s" })}>
     <NavBar client:only="react" />
     <section class="w-full">
       <slot />
