@@ -1,0 +1,39 @@
+# Largely based on the official Astro action
+# https://docs.astro.build/en/guides/deploy/github/
+name: Deploy to Netlify Staging
+
+on:
+  # Trigger the workflow every time you push to the `main` branch
+  push:
+    branches: [ main ]
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    name: 'Deploy'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Netlify 
+        run: npm install -g netlify-cli
+
+      - uses: actions/checkout@v3
+
+      # Sets the branch name as environment variable
+      - uses: nelonoel/branch-name@v1.0.1
+      - uses: jsmrcaga/action-netlify-deploy@v2.0.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ env.NETLIFY_SITE_ID }}
+          NETLIFY_DEPLOY_MESSAGE: "Test deploy v${{ github.ref }}"
+          deploy_alias: ${{ env.BRANCH_NAME }}
+          build_directory: "./dist"
+      
+
