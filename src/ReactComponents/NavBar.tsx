@@ -169,7 +169,7 @@ function NavBar() {
         <motion.div
           animate={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 25 }}
-          className="fixed flex bg-[rgba(255, 255, 255, 0.2)] backdrop-blur-3xl bottom-0 left-0 w-full h-screen z-40 items-center justify-center"
+          className="fixed flex bg-[#011823] bottom-0 left-0 w-full h-screen z-40 items-center justify-center"
         >
           <div className="flex flex-col gap-14 text-2xl font-bold text-center items-center text-white">
             <a
