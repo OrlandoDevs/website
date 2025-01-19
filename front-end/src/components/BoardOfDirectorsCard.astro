@@ -1,0 +1,32 @@
+---
+import boardOfDirectorsData from "../data/boardOfDirectors.json";
+import type BoardOfDirectorsProps from "../interfaces/BoardOfDirectorsInterfaces";
+const boardOfDirectors: BoardOfDirectorsProps[] =
+  boardOfDirectorsData.boardDirectors;
+import { FaLinkedin } from "react-icons/fa";
+---
+
+{
+  boardOfDirectors.map((member) => (
+    <div
+      data-id={member.id}
+      class="card bg-[#0E5F7C] bg-opacity-75 w-full lg:w-96 shadow-lg text-slate-200 shadow-slate-700"
+    >
+      <h2 class="card-title justify-center text-4xl pt-4 font-bold text-center">
+        {member.name}
+      </h2>
+
+      <figure class="px-10 pt-4">
+        <img src={member.image} alt="Member" class="rounded-xl" />
+      </figure>
+      <div class="card-body items-center text-center">
+        <p class="text-xl">{member.title}</p>
+        <p class="text-sm">{member.role}</p>
+        <div class="flex items-center gap-2 btn bg-[#2c9db1] text-white border-none text-lg">
+          <FaLinkedin style={{ color: "blue" }} />
+          <a href={member.link}>Connect!</a>
+        </div>
+      </div>
+    </div>
+  ))
+}

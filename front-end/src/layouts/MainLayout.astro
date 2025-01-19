@@ -1,0 +1,56 @@
+---
+import Footer from "../components/Footer.astro";
+import NavBar from "../ReactComponents/NavBar";
+import { ClientRouter } from "astro:transitions";
+import { fade } from "astro:transitions";
+import "@fontsource/ibm-plex-serif/100.css";
+import "@fontsource/ibm-plex-serif/200.css";
+import "@fontsource/ibm-plex-serif/300.css";
+import "@fontsource/ibm-plex-serif/400.css";
+import "@fontsource/ibm-plex-serif/500.css";
+import "@fontsource/ibm-plex-serif/600.css";
+import "@fontsource/ibm-plex-serif/700.css";
+const { title = "Orlando Devs - Central Florida's developer community." } =
+  Astro.props;
+
+interface Props {
+  title?: string;
+}
+---
+
+<!-- class="bg-[#012638] p-0 m-0" --><!doctype html>
+<html
+  lang="en"
+  data-theme="pastel"
+  class="bg-gradient-to-b from-[#011C28] to-[#012638] p-0 m-0"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Central Florida's developer community." />
+    <meta property="og:title" content="Orlando Devs..." />
+    <meta
+      property="og:description"
+      content="Central Florida's developer community."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://orlandodevs.com" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.js"
+      integrity="sha512-BJ/5sR2hFxQTKin/55JQCcMTObShDBAmVjL/3NR/MVcrhyOazJjAgvROem03+HYyGw16SVdSfoWCFGr9syxAKA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <ClientRouter />
+
+    <title>{title}</title>
+    <link href="./images/footer-odev.png" rel="icon" type="image/x-icon" />
+  </head>
+
+  <body class="font-serif" transition:animate={fade({ duration: "0.4s" })}>
+    <NavBar client:only="react" />
+    <section class="w-full">
+      <slot />
+    </section>
+    <Footer />
+  </body>
+</html>

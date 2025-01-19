@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Group from "./Group.astro";
+type Props = {
+  groups: CollectionEntry<"groups">[];
+};
+
+const { groups } = Astro.props;
+---
+
+<div class="grid grid-cols-2 gap-x-16 gap-y-14 max-md:grid-cols-1 mb-24">
+  {
+    groups.map((group) => (
+      <div>
+        <Group group={group} />
+      </div>
+    ))
+  }
+</div>
