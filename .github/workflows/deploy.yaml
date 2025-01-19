@@ -35,5 +35,6 @@ jobs:
           NETLIFY_DEPLOY_MESSAGE: "Test deploy v${{ github.ref }}"
           deploy_alias: ${{ env.BRANCH_NAME }}
           build_directory: "./dist"
+          debug: ${{env.DEBUG_BUILD}}
       
 
