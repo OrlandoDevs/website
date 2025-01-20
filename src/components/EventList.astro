@@ -1,0 +1,14 @@
+---
+import EventCards from "./EventCards.astro";
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+  events: CollectionEntry<"events">[];
+};
+
+const { events } = Astro.props;
+---
+
+<div class="flex flex-row gap-10">
+  {events.map((event) => <EventCards event={event} />)}
+</div>
