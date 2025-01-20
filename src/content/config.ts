@@ -22,7 +22,7 @@ const eventCollection = defineCollection({
     price: z.number(),
     signUp: z.string(),
     description: z.string(),
-    details: z.string(),
+    locationURL: z.string(),
   }),
 });
 

@@ -35,11 +35,18 @@ const { Content } = await event.render();
       />
       <p class="text-2xl">📅 {event.data.date}</p>
       <p class="text-xl">⏰ {event.data.startTime} - {event.data.endTime}</p>
-      <p class="text-xl">📍 {event.data.location}</p>
+      <a
+        href={event.data.locationURL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-cyan-300 transition-colors"
+      >
+        <span class="text-xl">📍 {event.data.location}</span>
+      </a>
       <p class="text-xl">Price: ${event.data.price}</p>
       <a
         href={event.data.signUp}
-        class="text-white border-none text-lg underline"
+        class="text-white border-none text-lg underline hover:text-cyan-300 transition-colors"
       >
         Sign Up
       </a>
@@ -49,8 +56,7 @@ const { Content } = await event.render();
       <h2 class="text-3xl mb-4">Description</h2>
       <p>{event.data.description}</p>
 
-      <h2 class="text-3xl mt-8 mb-4">Details</h2>
-      <p>{event.data.details}</p>
+      <p>{(<Content />)}</p>
     </div>
   </div>
 </MainLayout>
