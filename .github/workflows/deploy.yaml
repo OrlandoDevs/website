@@ -35,7 +35,8 @@ jobs:
           NETLIFY_DEPLOY_MESSAGE: "Test deploy v${{ github.ref }}"
           deploy_alias: ${{ env.BRANCH_NAME }}
           build_directory: "./dist"
-          build_commpand: netlify build
+          debug: ${{ env.DEBUG_BUILD }}
+          build_command: netlify build
           install_command: npm install
       
 
