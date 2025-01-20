@@ -19,9 +19,6 @@ jobs:
     name: 'Build and Deploy'
     runs-on: ubuntu-latest
     environment: netlify-wills-org
-    env: 
-      NETLIFY_SITE_ID: ${{ env.NETLIFY_SITE_ID }}
-      debug: ${{ env.DEBUG_BUILD }}
     steps:
       - name: Install Netlify 
         run: npm install -g netlify-cli
@@ -33,7 +30,7 @@ jobs:
       - uses: jsmrcaga/action-netlify-deploy@v2.4.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ env.NETLIFY_SITE_ID }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_DEPLOY_MESSAGE: "Test deploy v${{ github.ref }}"
           deploy_alias: ${{ BRANCH_NAME }}
           build_directory: "./dist"
