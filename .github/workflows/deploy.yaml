@@ -16,9 +16,9 @@ permissions:
 
 jobs:
   deploy:
-    name: 'Build and Deploy'
+    name: 'Build and Deploy to Staging'
     runs-on: ubuntu-latest
-    environment: netlify-wills-org
+    environment: staging
     steps:
       - name: Install Netlify 
         run: npm install -g netlify-cli
@@ -30,11 +30,11 @@ jobs:
       - uses: jsmrcaga/action-netlify-deploy@v2.4.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
           NETLIFY_DEPLOY_MESSAGE: "Test deploy v${{ github.ref }}"
-          deploy_alias: "staging-build"
+          deploy_alias: ${{ vars.DEPLOY_ALIAS }}
           build_directory: "./dist"
-          debug: ${{ env.DEBUG_BUILD }}
+          debug: ${{ vars.DEBUG_BUILD }}
           build_command: netlify build
           install_command: npm install
       
