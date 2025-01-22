@@ -47,6 +47,6 @@ jobs:
         uses: peter-evans/create-or-update-comment@v1
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          body: The site has been deployed! You can preview it here: ${{ env.NETLIFY_PREVIEW_URL }}
+          body: "The site has been deployed! You can preview it here: ${{ env.NETLIFY_PREVIEW_URL }}"
       
 
