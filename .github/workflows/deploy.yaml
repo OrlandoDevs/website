@@ -9,7 +9,7 @@ on:
   #     - '**'
 
   # Trigger workflow when PR is (re)opened or syncronized (pushed to remote)  
-  pull_request:
+  pull_request_target:
     
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
