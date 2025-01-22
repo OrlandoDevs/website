@@ -9,7 +9,8 @@ on:
   #     - '**'
 
   # Trigger workflow when PR is (re)opened or syncronized (pushed to remote)  
-  pull_request_target: [opened, synchronize]
+  pull_request_target:
+    types: [opened, synchronize]
      
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
