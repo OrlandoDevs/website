@@ -6,6 +6,12 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   push:
     branches: [ main ]
+
+  # Trigger workflow when PR is opened or updated  
+  pull_request:
+    types:
+      - opened
+      - edited
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
