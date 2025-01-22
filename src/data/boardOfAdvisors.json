@@ -77,6 +77,12 @@
       "name": "Hassan Sequias",
       "image": "/images/male-image-placeholder.jpg",
       "role": "CEO & Founder at Xureal"
+    },
+    {
+      "id": 14,
+      "name": "Christopher Pecoraro",
+      "image": "/images/male-image-placeholder.jpg",
+      "role": "Director of Web Development at Rollins College"
     }
   ]
 }
