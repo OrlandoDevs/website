@@ -3,13 +3,8 @@
 name: Deploy to Netlify Staging
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # push:
-  #   branches:
-  #     - '**'
-
   # Trigger workflow when PR is (re)opened or syncronized (pushed to remote)  
-  pull_request_target:
+  pull_request:
     types: [opened, synchronize]
      
   # Allows you to run this workflow manually from the Actions tab on GitHub.
@@ -21,6 +16,7 @@ permissions:
   id-token: write
 
 jobs:
+  permissions: write-all
   deploy:
     name: 'Build and Deploy to Staging'
     runs-on: ubuntu-latest
