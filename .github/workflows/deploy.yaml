@@ -9,9 +9,8 @@ on:
 
   # Trigger workflow when PR is opened or updated  
   pull_request:
-    types:
-      - opened
-      - edited
+    types: [opened, edited]
+    
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
