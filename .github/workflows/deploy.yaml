@@ -38,7 +38,7 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
           NETLIFY_DEPLOY_MESSAGE: "Test deploy v${{ github.ref }}"
-          deploy_alias: ${{ vars.DEPLOY_ALIAS }}
+          # deploy_alias: ${{ vars.DEPLOY_ALIAS }}
           build_directory: "./dist"
           debug: ${{ vars.DEBUG_BUILD }}
           build_command: netlify build
