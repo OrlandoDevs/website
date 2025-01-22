@@ -8,9 +8,8 @@ on:
   #   branches:
   #     - '**'
 
-  # Trigger workflow when PR is opened or updated  
+  # Trigger workflow when PR is (re)opened or syncronized (pushed to remote)  
   pull_request:
-    types: [opened, synchronize]
     
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
