@@ -43,5 +43,17 @@ jobs:
           debug: ${{ vars.DEBUG_BUILD }}
           build_command: netlify build
           install_command: npm install
+      - name: Get Deploy URL
+        id: get_deploy_url
+        run: |
+          echo "Deploy URL: ${{ steps.deploy.outputs.deploy_url }}"
+          echo "deploy_url=${{ steps.deploy.outputs.deploy_url }}" >> $GITHUB_ENV
+
+      - name: Comment on PR with deploy URL
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            The site has been deployed! You can preview it here: ${{ env.deploy_url }}
       
 
