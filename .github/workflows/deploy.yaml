@@ -5,7 +5,8 @@ name: Deploy to Netlify Staging
 on:
   # Trigger the workflow every time you push to the `main` branch
   push:
-    branches: [ main ]
+    branches:
+      - '**'
 
   # Trigger workflow when PR is opened or updated  
   pull_request:
