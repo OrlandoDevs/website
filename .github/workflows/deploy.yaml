@@ -44,8 +44,8 @@ jobs:
       - name: Get Deploy URL
         id: get_deploy_url
         run: |
-          echo "Deploy URL: ${{ steps.deploy.outputs.deploy_url }}"
-          echo "deploy_url=${{ steps.deploy.outputs.deploy_url }}" >> $GITHUB_ENV
+          echo "Deploy URL: ${{ steps.deploy.outputs.NETLIFY_PREVIEW_URL }}"
+          echo "deploy_url=${{ steps.deploy.outputs.NETLIFY_PREVIEW_URL }}" >> $GITHUB_ENV
 
       - name: Comment on PR with deploy URL
         uses: peter-evans/create-or-update-comment@v1
