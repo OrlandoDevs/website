@@ -1,0 +1,62 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+export const getStaticPaths = async () => {
+  const events = await getCollection("events");
+  return events.map((event) => ({
+    params: { slug: event.slug },
+    props: { event },
+  }));
+};
+
+type Props = {
+  event: CollectionEntry<"events">;
+};
+
+const { event } = Astro.props;
+const { Content } = await event.render();
+---
+
+<MainLayout title={event.data.subject}>
+  <div class="p-6 mb-7 text-slate-300 text-xl mx-6">
+    <h1
+      class="bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text text-7xl text-center border-b-2 border-solid border-[#ABA1A1] lg:mt-10 mb-6 pb-4"
+    >
+      {event.data.subject}
+    </h1>
+
+    <div class="flex flex-col items-center gap-4 my-8">
+      <img
+        src={event.data.image}
+        alt={event.data.subject}
+        class="w-64 h-64 object-contain"
+      />
+      <p class="text-2xl">📅 {event.data.date}</p>
+      <p class="text-xl">⏰ {event.data.startTime} - {event.data.endTime}</p>
+      <a
+        href={event.data.locationURL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-cyan-300 transition-colors"
+      >
+        <span class="text-xl">📍 {event.data.location}</span>
+      </a>
+      <p class="text-xl">Price: ${event.data.price}</p>
+      <a
+        href={event.data.signUp}
+        class="text-white border-none text-lg underline hover:text-cyan-300 transition-colors"
+      >
+        Sign Up
+      </a>
+    </div>
+
+    <div class="prose-xl text-white max-w-3xl mx-auto">
+      <h2 class="text-3xl mb-4">Description</h2>
+      <p>{event.data.description}</p>
+
+      <p>{(<Content />)}</p>
+    </div>
+  </div>
+</MainLayout>

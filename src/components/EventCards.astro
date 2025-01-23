@@ -1,0 +1,53 @@
+---
+import { type CollectionEntry } from "astro:content";
+
+type Props = {
+  event: CollectionEntry<"events">;
+};
+
+const { event } = Astro.props;
+---
+
+<div
+  class="card bg-[#0e5f7c] text-white shadow-slate-700 w-96 shadow-lg min-h-full flex-shrink-0"
+>
+  <h2 class="text-center text-4xl my-1 font-semibold">
+    {event.data.groupName}
+  </h2>
+  <figure class="px-4 pt-4">
+    <img src={event.data.image} alt="Shoes" class="rounded-xl" />
+  </figure>
+  <div class="card-body items-center text-center p-6">
+    <h2 class="card-title">{event.data.subject}</h2>
+    <div class="flex flex-row justify-between w-full">
+      <span>📅 {event.data.date}</span>
+      <span>⏰ {event.data.startTime} - {event.data.endTime}</span>
+    </div>
+    <div class="flex flex-col w-full">
+      <a
+        href={event.data.locationURL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-cyan-300 transition-colors"
+      >
+        <span> 📍 {event.data.location}</span>
+      </a>
+      <span>🎟️ ${event.data.price}</span>
+    </div>
+    <p class="text-slate-300 border-y-2 border-[#ccc]">
+      {event.data.description}
+    </p>
+    <div class="card-actions flex flex-row justify-between w-full">
+      <a
+        href={event.data.signUp}
+        class="text-white border-none text-lg underline hover:text-cyan-300 transition-colors"
+        >Attend Event!</a
+      >
+      <a
+        href={`/events/${event.slug}`}
+        class="underline text-white border-none text-lg hover:text-cyan-300 transition-colors"
+        >View Details →</a
+      >
+    </div>
+  </div>
+</div>

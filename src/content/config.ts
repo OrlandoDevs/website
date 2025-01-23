@@ -10,6 +10,23 @@ const groupCollection = defineCollection({
   }),
 });
 
+const eventCollection = defineCollection({
+  schema: z.object({
+    groupName: z.string(),
+    image: z.string(),
+    date: z.string(),
+    subject: z.string(),
+    startTime: z.string(),
+    endTime: z.string(),
+    location: z.string(),
+    price: z.number(),
+    signUp: z.string(),
+    description: z.string(),
+    locationURL: z.string(),
+  }),
+});
+
 export const collections = {
   groups: groupCollection,
+  events: eventCollection,
 };

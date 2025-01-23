@@ -1,0 +1,12 @@
+---
+import EventCards from "./EventCards.astro";
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+  events: CollectionEntry<"events">[];
+};
+
+const { events } = Astro.props;
+---
+
+{events.map((event) => <EventCards event={event} />)}
