@@ -13,7 +13,7 @@ function NavBar() {
 
   return (
     <nav className="relative flex w-full items-center justify-between h-20 px-10">
-      <div className="flex items-center">
+      <div className="flex items-center transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
         <img src="/images/footer-odev.png" alt="Odevs" className="h-14" />
         <a
           className="btn btn-ghost text-4xl lg:text-5xl bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"

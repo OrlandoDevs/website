@@ -1,6 +1,7 @@
 import { defineCollection, z } from "astro:content";
 
 const groupCollection = defineCollection({
+  type: "content",
   schema: z.object({
     coordinators: z.array(
       z.object({ name: z.string(), image: z.string(), connect: z.string() }),
@@ -11,10 +12,11 @@ const groupCollection = defineCollection({
 });
 
 const eventCollection = defineCollection({
+  type: "content",
   schema: z.object({
     groupName: z.string(),
     image: z.string(),
-    date: z.string(),
+    date: z.date(),
     subject: z.string(),
     startTime: z.string(),
     endTime: z.string(),

@@ -1,7 +1,7 @@
 ---
 groupName: Orlando Devs
 image: /images/orlando-devs-logo.png
-date: "Feb 1, 2025"
+date: 2025-01-01
 subject: Exploring Next and Server-side Rendering
 startTime: "7pm"
 endTime: "9pm"
