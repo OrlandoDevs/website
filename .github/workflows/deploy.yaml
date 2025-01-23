@@ -21,13 +21,15 @@ jobs:
     runs-on: ubuntu-latest
     environment: staging
     steps:
-      - name: Install Netlify 
+      - name: 'Install Netlify'
         run: npm install -g netlify-cli
 
       # Used to checkout the current branch at HEAD from this repo
+      - name: "Checkout Current Branch"
       - uses: actions/checkout@v3
 
       # Runs the netlify deploy commands
+      - name: 'Build and Deploy Site'
       - uses: jsmrcaga/action-netlify-deploy@v2.4.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -38,7 +40,7 @@ jobs:
           build_command: netlify build
           install_command: npm install
 
-      - name: Comment on PR with deploy URL
+      - name: 'Comment on PR With Deploy URL'
         uses: thollander/actions-comment-pull-request@v3
         with:
           message: "The site has been deployed! You can preview it here: ${{ env.NETLIFY_PREVIEW_URL }}"
