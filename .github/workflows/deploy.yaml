@@ -26,11 +26,11 @@ jobs:
 
       # Used to checkout the current branch at HEAD from this repo
       - name: "Checkout Current Branch"
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       # Runs the netlify deploy commands
       - name: 'Build and Deploy Site'
-      - uses: jsmrcaga/action-netlify-deploy@v2.4.0
+        uses: jsmrcaga/action-netlify-deploy@v2.4.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
