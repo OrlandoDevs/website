@@ -47,6 +47,6 @@ jobs:
       - name: Comment on PR with deploy URL
         uses: thollander/actions-comment-pull-request@v3
         with:
-          body: "The site has been deployed! You can preview it here: ${{ env.NETLIFY_PREVIEW_URL }}"
+          message: "The site has been deployed! You can preview it here: ${{ env.NETLIFY_PREVIEW_URL }}"
       
 
