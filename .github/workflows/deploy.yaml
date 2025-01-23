@@ -16,7 +16,6 @@ permissions:
   id-token: write
 
 jobs:
-  permissions: write-all
   deploy:
     name: 'Build and Deploy to Staging'
     runs-on: ubuntu-latest
@@ -33,7 +32,7 @@ jobs:
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
-          NETLIFY_DEPLOY_MESSAGE: "Test deploy v${{ github.ref }}"
+          NETLIFY_DEPLOY_MESSAGE: "Test deploy v${{ github.head_ref }}"
           build_directory: "./dist"
           debug: ${{ vars.DEBUG_BUILD }}
           build_command: netlify build
@@ -46,7 +45,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Comment on PR with deploy URL
-        uses: peter-evans/create-or-update-comment@v1
+        uses: thollander/actions-comment-pull-request@v3
         with:
           issue-number: ${{steps.get-pr-number.outputs.pr }}
           body: "The site has been deployed! You can preview it here: ${{ env.NETLIFY_PREVIEW_URL }}"
