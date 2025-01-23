@@ -13,7 +13,6 @@ on:
 # Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
-  id-token: write
   pull-requests: write 
 
 jobs:
@@ -38,12 +37,6 @@ jobs:
           debug: ${{ vars.DEBUG_BUILD }}
           build_command: netlify build
           install_command: npm install
-
-      # - name: Get PR number
-      #   id: get-pr-number
-      #   uses: bcgov-nr/action-get-pr@v0.0.1
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Comment on PR with deploy URL
         uses: thollander/actions-comment-pull-request@v3
