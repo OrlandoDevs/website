@@ -38,16 +38,15 @@ jobs:
           build_command: netlify build
           install_command: npm install
 
-      - name: Get PR number
-        id: get-pr-number
-        uses: bcgov-nr/action-get-pr@v0.0.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Get PR number
+      #   id: get-pr-number
+      #   uses: bcgov-nr/action-get-pr@v0.0.1
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Comment on PR with deploy URL
         uses: thollander/actions-comment-pull-request@v3
         with:
-          issue-number: ${{steps.get-pr-number.outputs.pr }}
           body: "The site has been deployed! You can preview it here: ${{ env.NETLIFY_PREVIEW_URL }}"
       
 
