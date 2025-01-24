@@ -29,8 +29,8 @@ if ($args.Count -ne 2) {
 }
 
 # Ensure that the template is present
-if (!(Test-Path -Path "src/content/events/TEMPLATE.md")) {
-  Write-Error "Error: TEMPLATE.md not found at src/content/events/TEMPLATE.md"
+if (!(Test-Path -Path "src/content/templates/event.md")) {
+  Write-Error "Error: event.md not found at src/content/templates/event.md"
   exit 1
 }
 
@@ -54,6 +54,6 @@ if (Test-Path -Path $filename) {
 }
 
 # Copy the template file and name the copy
-Copy-Item -Path "src/content/events/TEMPLATE.md" -Destination $filename
+Copy-Item -Path "src/content/templates/event.md" -Destination $filename
 
 Write-Host "File '$filename' created successfully! Please ensure you fill in your own details about this event."

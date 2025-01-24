@@ -31,8 +31,8 @@ if [ $# -ne 2 ]; then
 fi
 
 # Ensure that the template is present
-if [ ! -f "src/content/events/TEMPLATE.md" ]; then 
-  echo "Error: TEMPLATE.md not found at src/content/events/TEMPLATE.md"
+if [ ! -f "src/content/templates/event.md" ]; then 
+  echo "Error: events.md not found at src/content/templates/event.md"
   exit 1
 fi
 
@@ -57,6 +57,6 @@ fi
 
 
 # Copy the template file and name the copy
-cp src/content/events/TEMPLATE.md "src/content/events/$filename"
+cp src/content/templates/event.md "src/content/events/$filename"
 
 echo "File '$filename' created successfully! Please ensure you fill in your own details about this event."
