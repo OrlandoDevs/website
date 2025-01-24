@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+import { formatDate } from "../../utils/formatDate";
 
 export const getStaticPaths = async () => {
   const events = await getCollection("events");
@@ -33,7 +34,7 @@ const { Content } = await event.render();
         alt={event.data.subject}
         class="w-64 h-64 object-contain"
       />
-      <p class="text-2xl">📅 {event.data.date}</p>
+      <p class="text-2xl">📅 {formatDate(event.data.date)}</p>
       <p class="text-xl">⏰ {event.data.startTime} - {event.data.endTime}</p>
       <a
         href={event.data.locationURL}
@@ -53,8 +54,8 @@ const { Content } = await event.render();
     </div>
 
     <div class="prose-xl text-white max-w-3xl mx-auto">
-      <h2 class="text-3xl mb-4">Description</h2>
-      <p>{event.data.description}</p>
+      <!-- <h2 class="text-3xl mb-4">Description</h2>
+      <p>{event.data.description}</p> -->
 
       <p>{(<Content />)}</p>
     </div>

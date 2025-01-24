@@ -42,6 +42,7 @@ jobs:
 
       - name: 'Comment on PR With Deploy URL'
         uses: thollander/actions-comment-pull-request@v3
+        if: "${{ github.event_name == 'pull_request' }}"
         with:
           message: "The site has been deployed! You can preview it here: ${{ env.NETLIFY_PREVIEW_URL }}"
       
