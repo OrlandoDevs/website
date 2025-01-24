@@ -3,7 +3,7 @@ $ErrorActionPreference = "Stop"
 
 # Function to display help message
 function Show-Help {
-  Write-Host "Usage: ./new-event.ps1 DATE NAME"
+  Write-Host "Usage: ./scripts/new-event.ps1 DATE NAME"
   Write-Host ""
   Write-Host "This script creates a new markdown event file based on a template."
   Write-Host ""
@@ -12,7 +12,7 @@ function Show-Help {
   Write-Host "  NAME  (required): The name of the event."
   Write-Host ""
   Write-Host "Example:"
-  Write-Host "  ./new-event.ps1 2023-11-21 'My Event Name'"
+  Write-Host "  ./scripts/new-event.ps1 2023-11-21 'My Event Name'"
   exit 0
 }
 
@@ -24,7 +24,7 @@ if ($args[0] -eq "--help") {
 # Check if two arguments are provided (excluding the help flag)
 if ($args.Count -ne 2) {
   Write-Error "Error: Please provide two arguments: date and name"
-  Write-Host "Use ./new-event.ps1 --help for more information."
+  Write-Host "Use ./scripts/new-event.ps1 --help for more information."
   exit 1
 }
 

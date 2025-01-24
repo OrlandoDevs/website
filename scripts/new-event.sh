@@ -4,7 +4,7 @@ set -e
 
 # Function to display help message
 function help {
-  echo "Usage: ./new-event.sh DATE NAME"
+  echo "Usage: ./scripts/new-event.sh DATE NAME"
   echo ""
   echo "This script creates a new markdown event file based on a template."
   echo ""
@@ -13,7 +13,7 @@ function help {
   echo "  NAME  (required): The name of the event."
   echo ""
   echo "Example:"
-  echo "  ./new-event.sh 2023-11-21 'My Event Name'"
+  echo "  ./scripts/new-event.sh 2023-11-21 'My Event Name'"
   exit 0
 }
 
@@ -26,7 +26,7 @@ fi
 # Check if two arguments are provided
 if [ $# -ne 2 ]; then
   echo "Error: Please provide two arguments: date and name"
-  echo "Use ./new-event.sh --help for more"
+  echo "Use ./scripts/new-event.sh --help for more"
   exit 1
 fi
 
