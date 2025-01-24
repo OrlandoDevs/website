@@ -14,7 +14,16 @@ Thank you for your interest in improving the Orlando Devs website! This is an op
 
 
 ## Group Adminsitration
-If you are a group admin and want to make an update to your group's profile, clone the repo and edit your group file under `website/src/content/groups/your-group.md`. Include or omit as much as you feel necessary.
+If you are a group admin and want to make an update to your group's profile, clone the repo and edit your group file under `website/src/content/groups/your-group.md`. Include or omit as much as you feel necessary. 
+
+## Event Administration 
+
+If you wish to add a new event, please check out the respository and make a new branch with the name of your event. Run the `new-event.sh` or `new-event.ps` script according to your operating system, proving the name and date of the event. For example, `./new-event.sh 2023-11-21 'My Event Name'"`. This will create a new file in `src/content/events/` with the date and name of your event. Fill out all the necessary information and remove whatever is not. Commit the new file and open a pull request to the main branch. 
+
+### Troubleshooting new-event.sh|.ps1
+If you are unable to run the script, make it executable by running `sudo chmod +x ./scripts/new-event.sh` on Mac/Linux. 
+
+On Windows, open PowerShell as an administrator by right-clicking the PS icon and choosing "Run as Administrator". In the new window, run this: `Set-ExecutionPolicy Unrestricted`. You should now be able to run the `new-event.ps1` script after that completes. You should then set your execution policy back to `Restricted` once you are finished.
 
 ## Going Further
 If you have your own Netlify account and want to test the GitHub actions ahead of time, install [Act](https://github.com/nektos/act). Create a `.vars` file with `NETLIFY_SITE_ID` and `BRANCH_NAME` set. Create a `.secrets` file and set `NETLIFY_AUTH_TOKEN`. The format for both files is `BRANCH_NAME="my-cool-branch"` in pairs. Once your files are in place, run  `act workflow_dispatch -s --secret-file .secrets`. Assuming all of your code compiles, the runner should complete and you should have a staging version of the site deployed at the preview URL provided. Example output of a successful job:
