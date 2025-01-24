@@ -3,22 +3,17 @@
 name: Deploy to Netlify Staging
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  push:
-    branches: [ main ]
-
-  # Trigger workflow when PR is opened or updated  
+  # Trigger workflow when PR is (re)opened or syncronized (pushed to remote)  
   pull_request:
-    types:
-      - opened
-      - edited
+    types: [opened, synchronize]
+     
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
-  id-token: write
+  pull-requests: write 
 
 jobs:
   deploy:
@@ -26,22 +21,28 @@ jobs:
     runs-on: ubuntu-latest
     environment: staging
     steps:
-      - name: Install Netlify 
+      - name: 'Install Netlify'
         run: npm install -g netlify-cli
 
       # Used to checkout the current branch at HEAD from this repo
-      - uses: actions/checkout@v3
+      - name: "Checkout Current Branch"
+        uses: actions/checkout@v3
 
       # Runs the netlify deploy commands
-      - uses: jsmrcaga/action-netlify-deploy@v2.4.0
+      - name: 'Build and Deploy Site'
+        uses: jsmrcaga/action-netlify-deploy@v2.4.0
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
-          NETLIFY_DEPLOY_MESSAGE: "Test deploy v${{ github.ref }}"
-          deploy_alias: ${{ vars.DEPLOY_ALIAS }}
+          NETLIFY_DEPLOY_MESSAGE: "Test deploy v${{ github.head_ref }}"
           build_directory: "./dist"
           debug: ${{ vars.DEBUG_BUILD }}
           build_command: netlify build
           install_command: npm install
+
+      - name: 'Comment on PR With Deploy URL'
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          message: "The site has been deployed! You can preview it here: ${{ env.NETLIFY_PREVIEW_URL }}"
       
 
