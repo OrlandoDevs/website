@@ -1,7 +1,7 @@
 ---
 groupName: Codex
 image: "https://media.licdn.com/dms/image/D4E12AQGKq13jy1jk3g/article-cover_image-shrink_600_2000/0/1718276910176?e=2147483647&v=beta&t=qhmZkQz95RTCnsA1-UtN2zxspMPZdR4FvLwp3-ACCj0"
-date: "2024-12-01"
+date: 2025-01-31
 subject: What does it mean to be a Junior
 startTime: "5pm"
 endTime: "7pm"

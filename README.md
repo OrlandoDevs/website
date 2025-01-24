@@ -17,7 +17,7 @@ Thank you for your interest in improving the Orlando Devs website! This is an op
 If you are a group admin and want to make an update to your group's profile, clone the repo and edit your group file under `website/src/content/groups/your-group.md`. Include or omit as much as you feel necessary.
 
 ## Going Further
-If you have your own Netlify account and want to test the GitHub actions ahead of time, install [Act](https://github.com/nektos/act). Create a `.vars` file with `NETLIFY_SITE_ID` and `BRANCH_NAME` set. Create a `.secrets` file and set `NETLIFY_AUTH_TOKEN`. The format for both files is `BRANCH_NAME="my-cool-branch"` in pairs. Once your files are in place, run  `act -s --secret-file .secrets`. Assuming all of your code compiles, the runner should complete and you should have a staging version of the site deployed at the preview URL provided. Example output of a successful job:
+If you have your own Netlify account and want to test the GitHub actions ahead of time, install [Act](https://github.com/nektos/act). Create a `.vars` file with `NETLIFY_SITE_ID` and `BRANCH_NAME` set. Create a `.secrets` file and set `NETLIFY_AUTH_TOKEN`. The format for both files is `BRANCH_NAME="my-cool-branch"` in pairs. Once your files are in place, run  `act workflow_dispatch -s --secret-file .secrets`. Assuming all of your code compiles, the runner should complete and you should have a staging version of the site deployed at the preview URL provided. Example output of a successful job:
 
 ```
 Build logs:         https://app.netlify.com/sites/odevs-pipeline-testing/deploys/678d0d409e40cd228387f837

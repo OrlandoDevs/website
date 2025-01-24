@@ -1,12 +1,25 @@
 ---
 import EventCards from "./EventCards.astro";
 import type { CollectionEntry } from "astro:content";
+import { isSameDay } from "../utils/isSameDay";
 
 type Props = {
   events: CollectionEntry<"events">[];
 };
 
 const { events } = Astro.props;
+
+const currentDate = new Date();
+
+const sortedCards = events.sort(
+  (a: CollectionEntry<"events">, b: CollectionEntry<"events">) =>
+    a.data.date.valueOf() - b.data.date.valueOf(),
+);
+
+const currentEvents = sortedCards.filter((event) => {
+  const eventDate = new Date(event.data.date);
+  return eventDate > currentDate || isSameDay(eventDate, currentDate);
+});
 ---
 
-{events.map((event) => <EventCards event={event} />)}
+{currentEvents.map((event) => <EventCards event={event} />)}

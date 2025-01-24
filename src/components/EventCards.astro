@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry } from "astro:content";
+import { formatDate } from "../utils/formatDate";
 
 type Props = {
   event: CollectionEntry<"events">;
@@ -9,30 +10,36 @@ const { event } = Astro.props;
 ---
 
 <div
-  class="card bg-[#0e5f7c] text-white shadow-slate-700 w-96 shadow-lg min-h-full flex-shrink-0"
+  class="card bg-[#0e5f7c] text-white shadow-slate-700 w-[350px] lg:my-10 shadow-lg min-h-[610px] h-auto"
 >
   <h2 class="text-center text-4xl my-1 font-semibold">
     {event.data.groupName}
   </h2>
   <figure class="px-4 pt-4">
-    <img src={event.data.image} alt="Shoes" class="rounded-xl" />
+    <img
+      src={event.data.image}
+      alt="Shoes"
+      class="rounded-xl h-[235px] w-[350px]"
+    />
   </figure>
   <div class="card-body items-center text-center p-6">
     <h2 class="card-title">{event.data.subject}</h2>
-    <div class="flex flex-row justify-between w-full">
-      <span>📅 {event.data.date}</span>
-      <span>⏰ {event.data.startTime} - {event.data.endTime}</span>
+    <div class="flex flex-col w-full gap-y-1">
+      <span class="self-start">📅 {formatDate(event.data.date)}</span>
+      <span class="self-start"
+        >⏰ {event.data.startTime} - {event.data.endTime}</span
+      >
     </div>
-    <div class="flex flex-col w-full">
+    <div class="flex flex-col w-full gap-y-1">
       <a
         href={event.data.locationURL}
         target="_blank"
         rel="noopener noreferrer"
-        class="hover:text-cyan-300 transition-colors"
+        class="hover:text-cyan-300 transition-colors self-end"
       >
         <span> 📍 {event.data.location}</span>
       </a>
-      <span>🎟️ ${event.data.price}</span>
+      <span class="self-end">🎟️ ${event.data.price}</span>
     </div>
     <p class="text-slate-300 border-y-2 border-[#ccc]">
       {event.data.description}
