@@ -1,7 +1,7 @@
 ---
 groupName: Orlando Devs
 image: /images/events/odevsatconduit.jpg
-date: "January 28, 2025"
+date: "2025-01-28"
 subject: First ODevs of 2025! AI Apps and Networking for Web Apps
 startTime: "7m"
 endTime: "9pm"

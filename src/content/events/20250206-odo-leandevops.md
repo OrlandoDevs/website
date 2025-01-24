@@ -1,7 +1,7 @@
 ---
 groupName: Orlando DevOps
 image: https://images.squarespace-cdn.com/content/v1/614280ecc9499c3eb33931f7/1661203698470-L00YPY5YB7NVQJ2QACCH/tempImageEMUJwc.gif?format=1500w
-date: "February 6, 2025"
+date: "2025-02-06"
 subject: DevOps Lean Beer in the New Year
 startTime: "7pm"
 endTime: "9pm"

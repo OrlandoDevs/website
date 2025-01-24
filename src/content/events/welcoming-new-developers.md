@@ -1,7 +1,7 @@
 ---
 groupName: Orlando Devs
 image: "https://www.yarddiant.com/images/what-do-most-web-developers-use.jpg"
-date: "Feb 14, 2025"
+date: "2024-12-17"
 subject: Welcoming new developers into the community!
 startTime: "6pm"
 endTime: "9pm"

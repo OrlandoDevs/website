@@ -1,7 +1,7 @@
 ---
 groupName: Orlando DevOps
 image: "https://images.surferseo.art/5a3a31a2-7774-49c4-9d51-814ff56ef37a.webp"
-date: "Mar 31, 2025"
+date: "2025-05-01"
 subject: Terraform, what is it?
 startTime: "6pm"
 endTime: "8pm"
