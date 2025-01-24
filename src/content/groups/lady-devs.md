@@ -3,11 +3,11 @@ coordinators:
   [
     {
       name: "Name Here",
-      image: "/images/female-image-placeholder.jpg",
+      image: "/images/people/female-image-placeholder.jpg",
       connect: "linkUrl",
     },
   ]
-groupLogo: /images/orlando-devs-logo.png
+groupLogo: /images/groups/orlando-devs-logo.png
 title: Lady Devs
 ---
 

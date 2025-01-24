@@ -3,22 +3,36 @@ coordinators:
   [
     {
       name: "Mike Butler",
-      image: "/images/male-image-placeholder.jpg",
-      connect: "linkUrl",
+      image: "/images/people/mikebutler.jpg",
+      connect: "https://www.linkedin.com/in/mike-butler-6401634/",
     },
     {
-      name: "Mike",
-      image: "/images/male-image-placeholder.jpg",
-      connect: "linkUrl",
+      name: "Dan Crenshaw",
+      image: "/images/people/dancrenshaw.jpg",
+      connect: "https://www.linkedin.com/in/daniel-crenshaw-bb336b190/",
     },
     {
-      name: "Luis Felipe",
-      image: "/images/male-image-placeholder.jpg",
-      connect: "linkUrl",
+      name: "Felipe Hernandez",
+      image: "/images/people/felipehernandez.jpg",
+      connect: "https://www.linkedin.com/in/lf-hernandez/",
+    },
+    {
+      name: "Brian Logan",
+      image: "/images/people/brianlogan.jpg",
+      connect: "https://www.linkedin.com/in/brianjlogan/",
+    },
+    {
+      name: "Rob Schneider",
+      image: "/images/people/robschn.jpg",
+      connect: "https://www.linkedin.com/in/robschn/",
     },
   ]
-groupLogo: /images/orlando-devops.jpg
+groupLogo: /images/groups/orlando-devops.jpg
 title: Orlando DevOps
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio officia accusamus nam beatae excepturi, quasi nesciunt fugit, accusantium magnam quibusdam quis error corrupti aliquid aliquam ratione ducimus optio nihil odit veniam rem assumenda? Suscipit perspiciatis reprehenderit vel obcaecati blanditiis porro, architecto ipsam aut fugit voluptatem eaque quos minus quis quas.
+The Orlando DevOps Community Group is a welcoming bunch of DevOps Enthusiasts in the Greater Orlando Area. We generally meet twice a month, the first Thursday is Lean DevOps (Coffee) and other Social functions and the Third Thursday where this year we are diving into the "Year of DevOps", going through the famous infinity loop!
+
+You can [Join our LinkedIn Group](https://www.linkedin.com/groups/12876376/), our [Meetup Group](https://www.meetup.com/Orlando-DevOps/) and we post all events on the [Odevs Eventbrite](https://www.eventbrite.com/o/orlando-devs-15266001174), so follow us there.
+
+We are always active on [Slack](https://orlandodevs.com/slack), so come join in the fun!

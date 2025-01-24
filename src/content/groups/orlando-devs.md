@@ -3,21 +3,21 @@ coordinators:
   [
     {
       name: "Brian Rinaldi",
-      image: "/images/male-image-placeholder.jpg",
+      image: "/images/people/male-image-placeholder.jpg",
       connect: "linkUrl",
     },
     {
       name: "Caitlin Augustin",
-      image: "/images/female-image-placeholder.jpg",
+      image: "/images/people/female-image-placeholder.jpg",
       connect: "linkUrl",
     },
     {
       name: "Jacques Fu",
-      image: "/images/male-image-placeholder.jpg",
+      image: "/images/people/male-image-placeholder.jpg",
       connect: "linkUrl",
     },
   ]
-groupLogo: /images/orlando-devs-logo.png
+groupLogo: /images/groups/orlando-devs-logo.png
 title: Orlando Devs
 ---
 
