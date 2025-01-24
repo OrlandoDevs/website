@@ -2,12 +2,12 @@
 coordinators:
   [
     {
-      name: "Name Here",
-      image: "/images/male-image-placeholder.jpg",
-      connect: "linkUrl",
+      name: "Chris Pecoraro",
+      image: "/images/people/chrispecoraro.jpg",
+      connect: "https://www.linkedin.com/in/chrispecoraro/",
     },
   ]
-groupLogo: /images/orlando-devs-logo.png
+groupLogo: /images/groups/orlando-devs-logo.png
 title: Orlando PHP
 ---
 

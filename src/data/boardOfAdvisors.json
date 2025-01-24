@@ -3,86 +3,92 @@
     {
       "id": 1,
       "name": "Andrew Kozlik",
-      "image": "/images/male-image-placeholder.jpg",
+      "image": "/images/people/male-image-placeholder.jpg",
       "role": "Head of Product at eMeals.com"
     },
     {
       "id": 2,
       "name": "Austin Musice",
-      "image": "/images/male-image-placeholder.jpg",
+      "image": "/images/people/male-image-placeholder.jpg",
       "role": "Director of Application Development at Omicron Media, Inc."
     },
     {
       "id": 3,
       "name": "David Khourshid",
-      "image": "/images/male-image-placeholder.jpg",
+      "image": "/images/people/male-image-placeholder.jpg",
       "role": "Founder at Stately"
     },
     {
       "id": 4,
       "name": "Dwane Hemmings",
-      "image": "/images/male-image-placeholder.jpg",
+      "image": "/images/people/male-image-placeholder.jpg",
       "role": "JavaScript Developer Advocate"
     },
     {
       "id": 5,
       "name": "Matt Burgess",
-      "image": "/images/male-image-placeholder.jpg",
+      "image": "/images/people/male-image-placeholder.jpg",
       "role": "Senior Software Engineer at Cloudera"
     },
     {
       "id": 6,
       "name": "Jamarcus Williams",
-      "image": "/images/male-image-placeholder.jpg",
+      "image": "/images/people/male-image-placeholder.jpg",
       "role": "Flutter Engineer at Disney Parks"
     },
     {
       "id": 7,
       "name": "Timothy Ferrell",
-      "image": "/images/male-image-placeholder.jpg",
+      "image": "/images/people/male-image-placeholder.jpg",
       "role": "Engineering Manager at Okta"
     },
     {
       "id": 8,
       "name": "Brian Shacklett",
-      "image": "/images/male-image-placeholder.jpg",
+      "image": "/images/people/male-image-placeholder.jpg",
       "role": "Principal Consultant at Slalom"
     },
     {
       "id": 9,
       "name": "German Gamboa",
-      "image": "/images/male-image-placeholder.jpg",
+      "image": "/images/people/male-image-placeholder.jpg",
       "role": "Senior Software Engineer at OLO inc"
     },
     {
       "id": 10,
       "name": "Rajiv Menon",
-      "image": "/images/male-image-placeholder.jpg",
+      "image": "/images/people/male-image-placeholder.jpg",
       "role": "CEO, Informulate"
     },
     {
       "id": 11,
       "name": "Jenny Truong",
-      "image": "/images/female-image-placeholder.jpg",
+      "image": "/images/people/female-image-placeholder.jpg",
       "role": "Operations and Developer Relations at Stately.ai"
     },
     {
       "id": 12,
       "name": "Rex Cartanega",
-      "image": "/images/male-image-placeholder.jpg",
+      "image": "/images/people/male-image-placeholder.jpg",
       "role": "CTO & Partner at Xureal"
     },
     {
       "id": 13,
       "name": "Hassan Sequias",
-      "image": "/images/male-image-placeholder.jpg",
+      "image": "/images/people/male-image-placeholder.jpg",
       "role": "CEO & Founder at Xureal"
     },
     {
       "id": 14,
       "name": "Christopher Pecoraro",
-      "image": "/images/male-image-placeholder.jpg",
+      "image": "/images/people/chrispecoraro.jpg",
       "role": "Director of Web Development at Rollins College"
+    },
+    {
+      "id": 15,
+      "name": "Mike Butler",
+      "image": "/images/people/mikebutler.jpg",
+      "role": "Principled Sales Engineer at Progress Chef"
     }
   ]
 }

@@ -3,11 +3,11 @@ coordinators:
   [
     {
       name: "Name Here",
-      image: "/images/male-image-placeholder.jpg",
+      image: "/images/people/male-image-placeholder.jpg",
       connect: "linkUrl",
     },
   ]
-groupLogo: /images/orlando-devs-logo.png
+groupLogo: /images/groups/orlando-devs-logo.png
 title: IOS
 ---
 
