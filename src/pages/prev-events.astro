@@ -1,0 +1,41 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+import { isSameDay } from "../utils/isSameDay";
+
+const allEvents = await getCollection("events");
+const currentDate = new Date();
+const currentYear = new Date().getFullYear();
+
+const pastEvents = allEvents
+  .filter((event) => {
+    const eventDate = new Date(event.data.date);
+    return eventDate < currentDate && !isSameDay(eventDate, currentDate);
+  })
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<MainLayout title="Previous Events">
+  <div class="min-h-svh">
+    <h1
+      class="bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text text-7xl text-center border-b-2 border-solid border-[#ABA1A1] lg:mt-10 mb-20 pb-4"
+    >
+      Previous Events
+    </h1>
+    <div class="p-6">
+      <h3 class="text-3xl text-white mb-4">{currentYear}:</h3>
+      <ul>
+        {
+          pastEvents.map((event) => {
+            return (
+              <li class="text-xl text-white mb-4">
+                <a href={`/events/${event.slug}`}>{event.data.subject}</a> -{" "}
+                <span>{event.data.groupName}</span>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </div>
+</MainLayout>

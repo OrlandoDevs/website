@@ -1,7 +1,7 @@
 ---
 groupName: Orlando DevOps
 image: /images/orlando-devops.jpg
-date: "Mar 31, 2025"
+date: 2025-03-31
 subject: CI/CD Pipeline Deep Dive
 startTime: "8pm"
 endTime: "10pm"
