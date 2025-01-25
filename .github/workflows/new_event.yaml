@@ -38,22 +38,22 @@ on:
         type: string
         description: Address for your event.
         required: true 
-      mapsURL:
-        type: string 
-        description: Google Maps URL for the event location.
-        required: false
-      price:
-        type: string
-        description: What it costs to attend your event.
-        required: false
+      # mapsURL:
+      #   type: string 
+      #   description: Google Maps URL for the event location.
+      #   required: false
+      # price:
+      #   type: string
+      #   description: What it costs to attend your event.
+      #   required: false
       signUpLink:
         type: string 
         description: Link to the Eventbrite / Meetup event page.
         required: false
-      shortDescription: 
-        type: string 
-        description: A short description of your event.
-        required: true
+      # shortDescription: 
+      #   type: string 
+      #   description: A short description of your event.
+      #   required: true
       parkingDetails:
         type: string 
         description: Let your attendees know the parking situation at your venue.
