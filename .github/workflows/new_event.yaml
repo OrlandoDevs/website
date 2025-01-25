@@ -38,22 +38,10 @@ on:
         type: string
         description: Address for your event.
         required: true 
-      # mapsURL:
-      #   type: string 
-      #   description: Google Maps URL for the event location.
-      #   required: false
-      # price:
-      #   type: string
-      #   description: What it costs to attend your event.
-      #   required: false
       signUpLink:
         type: string 
         description: Link to the Eventbrite / Meetup event page.
         required: false
-      # shortDescription: 
-      #   type: string 
-      #   description: A short description of your event.
-      #   required: true
       parkingDetails:
         type: string 
         description: Let your attendees know the parking situation at your venue.
@@ -66,7 +54,18 @@ on:
         type: string 
         description: A short introduction of your author
         required: true
-
+      # shortDescription: 
+      #   type: string 
+      #   description: A short description of your event.
+      #   required: true
+      # mapsURL:
+      #   type: string 
+      #   description: Google Maps URL for the event location.
+      #   required: false
+      # price:
+      #   type: string
+      #   description: What it costs to attend your event.
+      #   required: false
 jobs:
   createEvent:
     runs-on: ubuntu-latest
@@ -77,15 +76,18 @@ jobs:
       - name: Generate Branch Name
         id: branch_name
         run: echo BRANCH_NAME=$(echo ${{ github.event.inputs.eventName }} | tr ' ' '-' | awk '{print tolower($0)}') >> $GITHUB_OUTPUT
-
-      - name: Verify Branch Name
-        run: |
-          echo "The branch name is: ${{ steps.branch_name.outputs.BRANCH_NAME }}"
-    # - name: Create New Branch
-    #   uses: peterjgrainger/action-create-branch@v2.2.0
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #   with:
-    #     branch: ${{ github.event.inputs.eventName }}
-    # - name: Generate Event Markdown File
-    #   run: echo "${{ github.event.inputs.message }} ${{ fromJSON('["", "🥳"]')[github.event.inputs.use-emoji == 'true'] }} ${{ github.event.inputs.name }}"
+    - name: Create New Branch
+      uses: peterjgrainger/action-create-branch@v2.2.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        branch: ${{ steps.branch_name.outputs.BRANCH_NAME }}
+    - name: Generate Event Markdown File
+      id: file_name
+      run: |
+      ./create_event_markdown.sh
+    - name: Commit Event To Branch
+      run: |
+      git add ${{ steps.file_name.outputs.FILE_NAME }}
+      git commit -m "Added ${{ steps.file_name.outputs.FILE_NAME}} event"
+      git push
