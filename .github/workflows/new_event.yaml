@@ -1,4 +1,4 @@
-name: Register Event
+name: Register New Event
 
 on:
   workflow_dispatch:
