@@ -16,11 +16,13 @@ const { event } = Astro.props;
     {event.data.groupName}
   </h2>
   <figure class="px-4 pt-4">
-    <img
-      src={event.data.image}
-      alt="Shoes"
-      class="rounded-xl h-[235px] w-[350px]"
-    />
+    <a href={`/events/${event.slug}`}>
+      <img
+        src={event.data.image}
+        alt="Shoes"
+        class="rounded-xl h-[235px] w-[350px]"
+      />
+    </a>
   </figure>
   <div class="card-body items-center text-center p-6">
     <h2 class="card-title">{event.data.subject}</h2>

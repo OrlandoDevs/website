@@ -16,7 +16,7 @@ function NavBar() {
       <div className="flex items-center transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
         <img src="/images/footer-odev.png" alt="Odevs" className="h-14" />
         <a
-          className="btn btn-ghost text-4xl lg:text-5xl bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"
+          className="btn btn-ghost text-3xl lg:text-5xl bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"
           href="/"
         >
           Orlando Devs

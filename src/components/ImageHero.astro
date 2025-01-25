@@ -20,14 +20,18 @@ import { FcCalendar } from "react-icons/fc";
       >
         A community of developers for developers in the Greater Orlando area.
       </p>
-      <button class="btn btn-primary" onclick="location.href='/events'">
-        <FcCalendar />
-        Check out our Events!
-      </button>
-      <button class="btn btn-primary" onclick="location.href='/slack'">
-        <FaSlack style={{ color: "salmon" }} />
-        Join us on Slack!
-      </button>
+      <div
+        class="flex flex-col w-auto gap-y-3 justify-center content-center items-center lg:flex-row lg:gap-x-3 lg:h-80 lg:items-end"
+      >
+        <button class="btn btn-primary" onclick="location.href='/events'">
+          <FcCalendar />
+          Check out our Events!
+        </button>
+        <button class="btn btn-primary" onclick="location.href='/slack'">
+          <FaSlack style={{ color: "salmon" }} />
+          Join us on Slack!
+        </button>
+      </div>
     </div>
   </div>
 </div>
