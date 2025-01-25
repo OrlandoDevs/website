@@ -23,47 +23,46 @@ const { Content } = await event.render();
 <MainLayout title={event.data.subject}>
   <div class="p-6 mb-7 text-slate-300 text-xl mx-6">
     <h1
-      class="bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text text-5xl lg:text-7xl text-center border-b-2 border-solid border-[#ABA1A1] lg:mt-10 mb-6 pb-4"
+      class="bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text text-4xl lg:text-5xl text-center border-b-2 border-solid border-[#ABA1A1] lg:mt-10 mb-6 pb-4"
     >
       {event.data.subject}
     </h1>
-
+    <a href="/events" class="underline text-xl">← Back to Events</a>
     <div
-      class="flex flex-col items-center lg:flex-row lg:justify-evenly gap-4 my-8"
+      class="flex flex-col items-center lg:flex-row lg:justify-evenly gap-4 my-8 h-auto"
     >
-      <div>
+      <div class="flex flex-col self-start">
         <img
           src={event.data.image}
           alt={event.data.subject}
-          class="w-64 h-64 object-contain lg:w-full lg:h-[600px] lg:object-cover"
+          class="object-contain w-full lg:max-w-[600px] lg:h-[400px] lg:object-cover mb-4 lg:mb-0 lg:mt-8"
         />
+        <div class="flex flex-col gap-4 text-center lg:mt-4">
+          <p class="text-2xl">📅 {formatDate(event.data.date)}</p>
+          <p class="text-xl">
+            ⏰ {event.data.startTime} - {event.data.endTime}
+          </p>
+          <a
+            href={event.data.locationURL}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-cyan-300 transition-colors"
+          >
+            <span class="text-xl">📍 {event.data.location}</span>
+          </a>
+          <p class="text-xl">Price: ${event.data.price}</p>
+          <a
+            href={event.data.signUp}
+            class="text-white border-none text-lg underline hover:text-cyan-300 transition-colors"
+          >
+            Sign Up
+          </a>
+        </div>
       </div>
-      <div class="flex flex-col gap-8 lg:gap-10 text-center">
-        <p class="text-2xl">📅 {formatDate(event.data.date)}</p>
-        <p class="text-xl">⏰ {event.data.startTime} - {event.data.endTime}</p>
-        <a
-          href={event.data.locationURL}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-cyan-300 transition-colors"
-        >
-          <span class="text-xl">📍 {event.data.location}</span>
-        </a>
-        <p class="text-xl">Price: ${event.data.price}</p>
-        <a
-          href={event.data.signUp}
-          class="text-white border-none text-lg underline hover:text-cyan-300 transition-colors"
-        >
-          Sign Up
-        </a>
+
+      <div class="prose-xl text-white max-w-3xl self-start">
+        <p>{(<Content />)}</p>
       </div>
-    </div>
-
-    <div class="prose-xl text-white max-w-3xl mx-auto">
-      <!-- <h2 class="text-3xl mb-4">Description</h2>
-      <p>{event.data.description}</p> -->
-
-      <p>{(<Content />)}</p>
     </div>
   </div>
 </MainLayout>
