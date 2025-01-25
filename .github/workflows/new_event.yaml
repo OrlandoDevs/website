@@ -66,6 +66,7 @@ on:
       #   type: string
       #   description: What it costs to attend your event.
       #   required: false
+
 jobs:
   createEvent:
     runs-on: ubuntu-latest
@@ -84,10 +85,11 @@ jobs:
         branch: ${{ steps.branch_name.outputs.BRANCH_NAME }}
     - name: Generate Event Markdown File
       id: file_name
-      run: |
-      ./create_event_markdown.sh
+      run: ./create_event_markdown.sh
+      shell: bash
     - name: Commit Event To Branch
       run: |
       git add ${{ steps.file_name.outputs.FILE_NAME }}
       git commit -m "Added ${{ steps.file_name.outputs.FILE_NAME}} event"
       git push
+s
