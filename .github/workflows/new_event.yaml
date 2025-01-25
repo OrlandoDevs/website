@@ -1,0 +1,94 @@
+name: Register Event
+
+on:
+  workflow_dispatch:
+    inputs:
+      eventName:
+        type: string
+        description: The name for this event.
+        required: true
+      groupName: 
+        type: choice
+        description: Group Name
+        options: 
+        - Orlando Devs
+        - Orlando DevOps
+        - Orlando Innovation League
+        - OrlandoJS
+        - Orlando PHP
+        - Codex
+        - Lady Devs
+        - Frontend Devs
+        - Open Orlando
+        - IOS
+        required: true
+      date:
+        type: string
+        description: Date of your event in YYYY-MM-DD form.
+        required: true 
+      startTime:
+        type: string
+        description: Time your event starts (7PM).
+        required: true 
+      endTime:
+        type: string
+        description: Time your event ends (9PM).
+        required: true 
+      address:
+        type: string
+        description: Address for your event.
+        required: true 
+      mapsURL:
+        type: string 
+        description: Google Maps URL for the event location.
+        required: false
+      price:
+        type: string
+        description: What it costs to attend your event.
+        required: false
+      signUpLink:
+        type: string 
+        description: Link to the Eventbrite / Meetup event page.
+        required: false
+      shortDescription: 
+        type: string 
+        description: A short description of your event.
+        required: true
+      parkingDetails:
+        type: string 
+        description: Let your attendees know the parking situation at your venue.
+        required: false
+      talkTitle:
+        type: string
+        description: The title of the first description
+        required: true
+      authorIntroduction:
+        type: string 
+        description: A short introduction of your author
+        required: true
+
+jobs:
+  createEvent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository to the runner
+        uses: actions/checkout@v4  
+      - name: Make the script files executable
+        run: chmod +x branch-name
+      - name: Generate Branch Name
+        id: branch_name
+        run: bash branch-name.sh
+        shell: bash
+
+      - name: Verify Branch Name
+        run: |
+          echo "The branch name is: ${{ steps.branch_name.outputs.BRANCH_NAME }}"
+    # - name: Create New Branch
+    #   uses: peterjgrainger/action-create-branch@v2.2.0
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #   with:
+    #     branch: ${{ github.event.inputs.eventName }}
+    # - name: Generate Event Markdown File
+    #   run: echo "${{ github.event.inputs.message }} ${{ fromJSON('["", "🥳"]')[github.event.inputs.use-emoji == 'true'] }} ${{ github.event.inputs.name }}"
