@@ -75,7 +75,7 @@ jobs:
       - name: Check out the repository to the runner
         uses: actions/checkout@v4  
       - name: Make the script files executable
-        run: chmod +x branch-name
+        run: chmod +x branch-name,sh
       - name: Generate Branch Name
         id: branch_name
         run: bash branch-name.sh
