@@ -53,12 +53,16 @@ const groupEvents = events.filter(
     <div class="flex flex-col lg:flex-row justify-center gap-8 mb-10">
       {
         group.data.coordinators.map((c) => (
-          <div class="bg-[#0E5F7C] bg-opacity-20 w-full lg:w-96 shadow-lg text-slate-200 shadow-slate-800 rounded-xl">
-            <h2 class="card-title justify-center text-4xl pt-4 font-bold text-center">
+          <div class="bg-[#0E5F7C] bg-opacity-20 w-full lg:w-80 shadow-lg text-slate-200 shadow-slate-800 rounded-xl flex flex-col">
+            <h2 class="card-title justify-center text-2xl pt-4 font-bold text-center text-nowrap px-1">
               {c.name}
             </h2>
             <figure class="px-10 pt-4">
-              <img src={c.image} alt="Member" class="rounded-xl" />
+              <img
+                src={c.image}
+                alt="Member"
+                class="rounded-xl w-full lg:w-60 lg:h-48 object-cover"
+              />
             </figure>
             <div class="card-body items-center text-center">
               <div class="flex items-center gap-2 btn bg-[#2c9db1] text-white border-none text-lg">
