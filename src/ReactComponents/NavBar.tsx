@@ -12,7 +12,7 @@ function NavBar() {
   const isActive = (path: string) => urlEndpoint === path;
 
   return (
-    <nav className="relative flex w-full items-center justify-between h-20 px-10">
+    <nav className="relative flex w-full items-center justify-between h-20 px-4 lg:px-10">
       <div className="flex items-center transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
         <img src="/images/footer-odev.png" alt="Odevs" className="h-14" />
         <a
@@ -96,7 +96,7 @@ function NavBar() {
               >
                 Codex
               </a>
-              <a
+              {/* <a
                 className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
                 href="/groups/lady-devs"
               >
@@ -119,7 +119,7 @@ function NavBar() {
                 href="/groups/ios"
               >
                 IOS
-              </a>
+              </a> */}
               <a
                 className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
                 href="/groups"

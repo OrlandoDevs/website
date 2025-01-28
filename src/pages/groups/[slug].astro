@@ -34,7 +34,7 @@ const groupEvents = events.filter(
 <MainLayout title={group.data.title}>
   <div class="p-6 mb-7 text-slate-300 text-xl mx-6">
     <h1
-      class="bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text lg:text-7xl text-5xl text-center border-b-2 border-solid border-[#ABA1A1] lg:mt-10 mb-6 pb-4"
+      class="bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text text-4xl lg:text-5xl text-center border-b-2 border-solid border-[#ABA1A1] lg:mt-10 mb-6 pb-4"
     >
       {group.data.title}
     </h1>
@@ -43,22 +43,26 @@ const groupEvents = events.filter(
     >
       <Content />
     </div>
-    <h2 class="text-center text-5xl my-10 underline">Events:</h2>
+    <h2 class="text-center text-4xl my-10 underline">Events:</h2>
     <div
       class="flex flex-col justify-center items-center lg:flex-row lg:justify-evenly my-20 gap-8"
     >
       {(<EventList events={groupEvents} />)}
     </div>
-    <h2 class="text-center text-5xl mb-6 underline">Coordinators</h2>
+    <h2 class="text-center text-4xl mb-6 underline">Coordinators:</h2>
     <div class="flex flex-col lg:flex-row justify-center gap-8 mb-10">
       {
         group.data.coordinators.map((c) => (
-          <div class="bg-[#0E5F7C] bg-opacity-20 w-full lg:w-96 shadow-lg text-slate-200 shadow-slate-800 rounded-xl">
-            <h2 class="card-title justify-center text-4xl pt-4 font-bold text-center">
+          <div class="bg-[#0E5F7C] bg-opacity-20 w-full lg:w-80 shadow-lg text-slate-200 shadow-slate-800 rounded-xl flex flex-col">
+            <h2 class="card-title justify-center text-2xl pt-4 font-bold text-center text-nowrap px-1">
               {c.name}
             </h2>
             <figure class="px-10 pt-4">
-              <img src={c.image} alt="Member" class="rounded-xl" />
+              <img
+                src={c.image}
+                alt="Member"
+                class="rounded-xl w-full lg:w-60 lg:h-48 object-cover"
+              />
             </figure>
             <div class="card-body items-center text-center">
               <div class="flex items-center gap-2 btn bg-[#2c9db1] text-white border-none text-lg">
