@@ -7,7 +7,7 @@ startTime: 6:30 PM
 endTime: 8:30 PM
 location: Bush Auditorium - Rollins College
 locationURL: https://maps.app.goo.gl/Vk5521WUEhb3kzGZ7
-price: FREE
+price: 0
 signUp: Coming Soon
 description: Come join Orlando DevOps for our next installment of the Interview Series where we will sit down and discuss what DevOps Means to our guests.
 ---
