@@ -5,24 +5,24 @@
       "name": "Brian Rinaldi",
       "title": "President",
       "role": "Developer Experience Engineer at LaunchDarkly",
-      "link": "linkedIn Link",
-      "image": "/images/people/male-image-placeholder.jpg"
+      "link": "https://www.linkedin.com/in/brianrinaldi/",
+      "image": "https://media.licdn.com/dms/image/v2/C4E03AQFP0OYEXUimMw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1647523541573?e=1743638400&v=beta&t=m5DumOdT8b8LKJA8AxXCq0XpbtMJfxAUz8VgnLFMo1s"
     },
     {
       "id": 2,
       "name": "Caitlin Augustin",
       "title": "Vice President",
       "role": "VP of Product and Programs at DataKind",
-      "link": "linkedIn Link",
-      "image": "/images/people/female-image-placeholder.jpg"
+      "link": "https://www.linkedin.com/in/augustincaitlin/",
+      "image": "https://media.licdn.com/dms/image/v2/D4E03AQGoeKNowcMYgw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718797560166?e=1743638400&v=beta&t=bIWSFkwhOnG4arMKN_mBh-QXSt7S45M33LnO-r4y30A"
     },
     {
       "id": 3,
       "name": "Jacques Fu",
       "title": "Treasurer",
-      "role": "Co-Founder of Staxx and Beam.gg",
-      "link": "linkedIn Link",
-      "image": "/images/people/male-image-placeholder.jpg"
+      "role": "Founder at PETE Learning",
+      "link": "https://www.linkedin.com/in/jacquesfu/",
+      "image": "https://media.licdn.com/dms/image/v2/C5603AQHMyVhHV_eaEA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1621304059077?e=1743638400&v=beta&t=fAGhTWWzE8-qDLwZL-mbk51zKbJ2zcr_Qg_6VpU9b7I"
     }
   ]
 }
