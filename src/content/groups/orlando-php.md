@@ -7,7 +7,7 @@ coordinators:
       connect: "https://www.linkedin.com/in/chrispecoraro/",
     },
   ]
-groupLogo: /images/groups/orlando-devs-logo.png
+groupLogo: /images/groups/orlando-php.jpg
 title: Orlando PHP
 ---
 
