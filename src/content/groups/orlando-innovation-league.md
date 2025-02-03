@@ -11,4 +11,6 @@ groupLogo: /images/groups/orlando-devs-logo.png
 title: Orlando Innovation League
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio officia accusamus nam beatae excepturi, quasi nesciunt fugit, accusantium magnam quibusdam quis error corrupti aliquid aliquam ratione ducimus optio nihil odit veniam rem assumenda? Suscipit perspiciatis reprehenderit vel obcaecati blanditiis porro, architecto ipsam aut fugit voluptatem eaque quos minus quis quas.
+We are an ambitious group of founders, enterprise leaders, investors, mentors, technologists, and innovation leaders.
+
+Join us for shared experiences around  innovation  - whether it is Design Thinking, Agile, or Data-driven decision making - in any domain. 

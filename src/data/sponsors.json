@@ -22,13 +22,6 @@
       "image": "/images/sponsors/stax-logo.svg"
     },
     {
-      "id": 4,
-      "name": "Trova",
-      "description": "TechSpark Innovations is a leading-edge software solutions company dedicated to empowering businesses with innovative technology. From cloud computing to AI-driven tools, we specialize in crafting custom solutions that enhance productivity and drive growth. Our team of passionate developers and engineers collaborates closely with clients to turn complex challenges into streamlined systems. With a commitment to sustainability and community involvement, TechSpark proudly supports local initiatives and provides resources for underrepresented groups in tech. Discover how our expertise can ignite your vision and transform the way you work. Join us in building a smarter future.",
-      "link": "https://www.trovasearch.com/",
-      "image": "/images/sponsors/trova-logo.png"
-    },
-    {
       "id": 5,
       "name": "Informulate",
       "description": "TechSpark Innovations is a leading-edge software solutions company dedicated to empowering businesses with innovative technology. From cloud computing to AI-driven tools, we specialize in crafting custom solutions that enhance productivity and drive growth. Our team of passionate developers and engineers collaborates closely with clients to turn complex challenges into streamlined systems. With a commitment to sustainability and community involvement, TechSpark proudly supports local initiatives and provides resources for underrepresented groups in tech. Discover how our expertise can ignite your vision and transform the way you work. Join us in building a smarter future.",
@@ -41,20 +34,6 @@
       "description": "TechSpark Innovations is a leading-edge software solutions company dedicated to empowering businesses with innovative technology. From cloud computing to AI-driven tools, we specialize in crafting custom solutions that enhance productivity and drive growth. Our team of passionate developers and engineers collaborates closely with clients to turn complex challenges into streamlined systems. With a commitment to sustainability and community involvement, TechSpark proudly supports local initiatives and provides resources for underrepresented groups in tech. Discover how our expertise can ignite your vision and transform the way you work. Join us in building a smarter future.",
       "link": "https://www.credoconduit.com/",
       "image": "/images/sponsors/conduit-logo.svg"
-    },
-    {
-      "id": 7,
-      "name": "Thumbprint",
-      "description": "TechSpark Innovations is a leading-edge software solutions company dedicated to empowering businesses with innovative technology. From cloud computing to AI-driven tools, we specialize in crafting custom solutions that enhance productivity and drive growth. Our team of passionate developers and engineers collaborates closely with clients to turn complex challenges into streamlined systems. With a commitment to sustainability and community involvement, TechSpark proudly supports local initiatives and provides resources for underrepresented groups in tech. Discover how our expertise can ignite your vision and transform the way you work. Join us in building a smarter future.",
-      "link": "https://thumbprint.com/",
-      "image": "/images/sponsors/thumbprint-logo.svg"
-    },
-    {
-      "id": 8,
-      "name": "Civo",
-      "description": "TechSpark Innovations is a leading-edge software solutions company dedicated to empowering businesses with innovative technology. From cloud computing to AI-driven tools, we specialize in crafting custom solutions that enhance productivity and drive growth. Our team of passionate developers and engineers collaborates closely with clients to turn complex challenges into streamlined systems. With a commitment to sustainability and community involvement, TechSpark proudly supports local initiatives and provides resources for underrepresented groups in tech. Discover how our expertise can ignite your vision and transform the way you work. Join us in building a smarter future.",
-      "link": "https://www.civo.com/",
-      "image": "/images/sponsors/civo-logo.svg"
     },
     {
       "id": 9,

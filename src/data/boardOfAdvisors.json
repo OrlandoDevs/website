@@ -25,24 +25,6 @@
       "role": "JavaScript Developer Advocate"
     },
     {
-      "id": 5,
-      "name": "Matt Burgess",
-      "image": "https://media.licdn.com/dms/image/v2/D4E03AQHi0vHfNW948A/profile-displayphoto-shrink_200_200/B4EZQPv5N5GcAY-/0/1735431001964?e=1743638400&v=beta&t=FSrEPSJ7m8se6YkryEcX-PaxxqncqZRD0o2Y6gN9Fbo",
-      "role": "Product Manager at Cloudera"
-    },
-    {
-      "id": 6,
-      "name": "Jamarcus Williams",
-      "image": "https://media.licdn.com/dms/image/v2/C4E03AQF2GC1mTqNn8Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1608556645785?e=1743638400&v=beta&t=BY0jn34Dk9NYcz4TRs-dtoAt4RjAlZ4rndQGfbkBy1s",
-      "role": "Flutter Engineer at Disney Parks"
-    },
-    {
-      "id": 7,
-      "name": "Timothy Ferrell",
-      "image": "https://media.licdn.com/dms/image/v2/D4E03AQHW1IuunUzT0w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718244481484?e=1743638400&v=beta&t=phKJU3DcBV_HZR327smn-UJQJ6ZqBJsncfRQaizyqVo",
-      "role": "Engineering Manager, Credit Coverage at Stripe"
-    },
-    {
       "id": 8,
       "name": "Brian Shacklett",
       "image": "https://media.licdn.com/dms/image/v2/C5603AQHFbHeQtk6t-A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1586537690577?e=1743638400&v=beta&t=8pnm5XU5HuXPNFnj_bW2q3ae4NH_xoOhRmAOezBOFW0",
@@ -65,18 +47,6 @@
       "name": "Jenny Truong",
       "image": "https://media.licdn.com/dms/image/v2/C4D03AQGCOm-4HvjffA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516978910501?e=1743638400&v=beta&t=UXM0npJMHe_DYcDi8C_T2FhaNkeqK-9fTIQZ_NP2ZB4",
       "role": "Operations and Developer Relations at Stately.ai"
-    },
-    {
-      "id": 12,
-      "name": "Rex Cartanega",
-      "image": "https://media.licdn.com/dms/image/v2/D4E03AQHjuHBBtWHuYg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1683716230019?e=1743638400&v=beta&t=9drvNgSOd2lxy34UhWzMHCXOpeXqQs_kJvXPAieBMs8",
-      "role": "CTO & Partner at Xureal"
-    },
-    {
-      "id": 13,
-      "name": "Hassan Sequias",
-      "image": "/images/people/male-image-placeholder.jpg",
-      "role": "CEO & Founder at Xureal"
     },
     {
       "id": 14,
