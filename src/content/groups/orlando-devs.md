@@ -21,4 +21,4 @@ groupLogo: /images/groups/orlando-devs-logo.png
 title: Orlando Devs
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio officia accusamus nam beatae excepturi, quasi nesciunt fugit, accusantium magnam quibusdam quis error corrupti aliquid aliquam ratione ducimus optio nihil odit veniam rem assumenda? Suscipit perspiciatis reprehenderit vel obcaecati blanditiis porro, architecto ipsam aut fugit voluptatem eaque quos minus quis quas.
+The Orlando Devs meetup is the largest developer meetup in the Central Florida area. Every month we bring together a large and diverse group of developers of all skill levels to learn about new technologies, build their career and network.
