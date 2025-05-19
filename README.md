@@ -1,6 +1,6 @@
 # Welcome to Orlando Devs
 
-This is the main respository for version 3 of our website.
+This is the main repository for version 3 of our website.
 
 ## Local Development
 
