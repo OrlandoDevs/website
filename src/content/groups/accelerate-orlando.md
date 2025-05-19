@@ -8,5 +8,6 @@ coordinators:
     },
   ]
 groupLogo: /images/groups/orlando-devs-logo.png
-title: Codex
+title: Accelerate Orlando
 ---
+Accelerate Orlando is a new local group focused on principles from the techno-optimist and e/acc movements.

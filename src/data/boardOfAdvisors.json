@@ -2,63 +2,69 @@
   "advisors": [
     {
       "id": 1,
-      "name": "Andrew Kozlik",
-      "image": "https://media.licdn.com/dms/image/v2/D4E03AQH5mb-zjq0E-w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1687983321051?e=1743638400&v=beta&t=pqXtsFgj6OcYQBZmzB6TpYxrfRkjUzgJi4EHgsNrkso",
-      "role": "Founder & CEO at Code for Travel"
+      "name": "Jeremy Privett",
+      "image": "/images/people/jeremyprivett.jpg",
+      "role": "Founder - Omega Vortex"
     },
     {
       "id": 2,
       "name": "Austin Musice",
       "image": "/images/people/male-image-placeholder.jpg",
-      "role": "Director of Application Development at Omicron Media, Inc."
+      "role": "VP of App Development and Product at Echelon Fitness."
     },
     {
       "id": 3,
       "name": "David Khourshid",
-      "image": "https://media.licdn.com/dms/image/v2/C5103AQEu86fe80LDYQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1517420015659?e=1743638400&v=beta&t=JeVYLj5ibHBL4Cw-C8VmB8OrVPO58wm3tikJYUtbUeg",
+      "image": "/images/people/davidkhourshid.jpg",
       "role": "Founder at Stately"
     },
     {
       "id": 4,
       "name": "Dwane Hemmings",
-      "image": "https://media.licdn.com/dms/image/v2/C5603AQEjjoKJQ1MGVg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1517731760943?e=1743638400&v=beta&t=ytlv7-jb6J9IHj5XyvwdZP5NM_paIT11WGsBtKjV-yQ",
+      "image": "/images/people/dwanehemmings.jpg",
       "role": "JavaScript Developer Advocate"
     },
     {
-      "id": 8,
+      "id": 5,
       "name": "Brian Shacklett",
-      "image": "https://media.licdn.com/dms/image/v2/C5603AQHFbHeQtk6t-A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1586537690577?e=1743638400&v=beta&t=8pnm5XU5HuXPNFnj_bW2q3ae4NH_xoOhRmAOezBOFW0",
+      "image": "/images/people/brianshacklett.jpg",
       "role": "Principal Consultant at Slalom"
     },
     {
-      "id": 9,
+      "id": 6,
       "name": "German Gamboa",
-      "image": "https://media.licdn.com/dms/image/v2/D4E03AQE7wwhUp2_nFw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730479630153?e=1743638400&v=beta&t=2y2-dFLotzoDGgc7pypTPKmnKHvVaInPld9WeGJLxAQ",
+      "image": "/images/people/male-image-placeholder.jpg",
       "role": "Senior Software Engineer at OLO inc"
     },
     {
-      "id": 10,
+      "id": 7,
       "name": "Rajiv Menon",
-      "image": "https://media.licdn.com/dms/image/v2/C4E03AQH8U2s4gmAALQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1625580030054?e=1743638400&v=beta&t=XHiJgK9Qm7uaTndLpEAvNnnBTsSU_damkFYn6KVNIxU",
+      "image": "/images/people/rajivmenon.jpg",
       "role": "CEO, Informulate"
     },
     {
-      "id": 11,
+      "id": 8,
       "name": "Jenny Truong",
-      "image": "https://media.licdn.com/dms/image/v2/C4D03AQGCOm-4HvjffA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516978910501?e=1743638400&v=beta&t=UXM0npJMHe_DYcDi8C_T2FhaNkeqK-9fTIQZ_NP2ZB4",
-      "role": "Operations and Developer Relations at Stately.ai"
+      "image": "/images/people/jennytruong.jpg",
+      "role": "Head of Operations at Stately.ai"
     },
     {
-      "id": 14,
+      "id": 9,
       "name": "Christopher Pecoraro",
       "image": "/images/people/chrispecoraro.jpg",
       "role": "Director of Web Development at Rollins College"
     },
     {
-      "id": 15,
+      "id": 10,
       "name": "Mike Butler",
       "image": "/images/people/mikebutler.jpg",
       "role": "Principled Sales Engineer at Progress Chef"
+    },
+    {
+      "id": 11,
+      "name": "Will Gorman",
+      "image": "/images/people/willgorman.jpg",
+      "role": "CTO at Nucleus Security"
     }
   ]
 }
