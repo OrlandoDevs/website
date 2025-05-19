@@ -22,22 +22,37 @@
     },
     {
       "id": 6,
-      "name": "Codex"
+      "name": "Accelerate Orlando"
     },
     {
       "id": 7,
-      "name": "Lady Devs"
+      "name": "Orlando Ruby"
     },
     {
       "id": 8,
-      "name": "Frontend Devs"
+      "name": "Orlando UX"
     },
     {
       "id": 9,
-      "name": "Open Orlando"
+      "name
+    {
+      "id": 7,
+      "name": "Codex"
+    },
+    {
+      "id": 8,
+      "name": "Lady Devs"
+    },
+    {
+      "id": 9,
+      "name": "Frontend Devs"
     },
     {
       "id": 10,
+      "name": "Open Orlando"
+    },
+    {
+      "id": 11,
       "name": "IOS"
     }
   ]
