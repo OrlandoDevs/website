@@ -65,6 +65,11 @@
       "name": "Will Gorman",
       "image": "/images/people/willgorman.jpg",
       "role": "CTO at Nucleus Security"
-    }
+    },
+    { 
+      "id": 12,
+      "name": "Nick Walsh",
+      "image": "/images/people/nickwalsh.jpg",
+      "role": "Principle at Envy Labs"}
   ]
 }
