@@ -3,50 +3,50 @@
     {
       "id": 1,
       "name": "Envy Labs",
-      "description": "N/A",
+      "description": "Searching for a development shop isn't much fun. We're (hopefully) a breath of fresh air.",
       "link": "https://envylabs.com/",
       "image": "/images/sponsors/envy-logo.svg"
     },
     {
       "id": 2,
       "name": "Blue Wave",
-      "description": "N/A",
+      "description": "Unlocking your workforce's true potential starts with finding the right talent. Blue Wave connects businesses with top-tier talent to drive success.",
       "link": "https://bluewaverp.com/",
       "image": "/images/sponsors/bluewave-logo.svg"
     },
     {
       "id": 3,
       "name": "Stax",
-      "description": "N/A",
+      "description": "Stax empowers software platforms, small businesses, and large businesses, through simplified, industry-leading integrated payment and recurring billing solutions.",
       "link": "https://staxpayments.com/",
       "image": "/images/sponsors/stax-logo.svg"
     },
     {
       "id": 4,
       "name": "Worth AI",
-      "description": "N/A",
+      "description": "Streamline your operations with platform consolidation for faster approvals, enhanced compliance, and smarter risk management.",
       "link": "https://worthai.com/",
       "image": "/images/sponsors/worth-logo-black.svg"
     },
     {
       "id": 5,
       "name": "Informulate",
-      "description": "N/A",
+      "description": "BUILD. INNOVATE. TRANSFORM. We deliver expertly crafted digital products - that help you differentiate and scale.",
       "link": "https://www.informulate.com/",
       "image": "/images/sponsors/informulate-logo.svg"
     },
     {
       "id": 6,
       "name": "Conduit",
-      "description": "N/A",
+      "description": "An interdisciplinary society of individuals who believe that their work and lives get better when they come alongside each other.",
       "link": "https://www.credoconduit.com/",
       "image": "/images/sponsors/conduit-logo.svg"
     },
     {
       "id": 7,
       "name": "Patreon",
-      "description": "N/A",
-      "link": "https://www.patreon.com/",
+      "description": "We thank our Patreon supporters for their generous contributions that help us continue our mission.",
+      "link": "https://www.patreon.com/odevs",
       "image": "/images/sponsors/patreon-logo.svg"
     }
   ]

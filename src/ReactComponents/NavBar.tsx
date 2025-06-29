@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "../utils/useMediaQuery";
-import { FaSlack, FaCaretDown } from "react-icons/fa";
+import { FaDiscord, FaCaretDown } from "react-icons/fa6";
 import { FcCalendar } from "react-icons/fc";
+import groupsData from "../data/groups.json";
 
 function NavBar() {
   const [toggled, setToggled] = useState<boolean>(false);
@@ -10,6 +11,11 @@ function NavBar() {
   const urlEndpoint = window.location.pathname;
 
   const isActive = (path: string) => urlEndpoint === path;
+
+  // Get active groups, sorted by id
+  const activeGroups = groupsData.groups
+    .filter((g) => g.state === "active")
+    .sort((a, b) => a.id - b.id);
 
   return (
     <nav className="relative flex w-full items-center justify-between h-20 px-4 lg:px-10">
@@ -60,66 +66,15 @@ function NavBar() {
               <FaCaretDown />
             </div>
             <div className="dropdown-content flex flex-col items-center text-center bg-[#011C28] rounded-box z-[1] shadow text-slate-200 font-bold text-xl p-4 cursor-pointer mt-5 w-auto gap-2">
-              <a
-                className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
-                href="/groups/orlando-devs"
-              >
-                Orlando Devs
-              </a>
-              <a
-                className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
-                href="/groups/orlando-devops"
-              >
-                Orlando DevOps
-              </a>
-              <a
-                className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
-                href="/groups/orlando-innovation-league"
-              >
-                Orlando Innovation League
-              </a>
-              <a
-                className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
-                href="/groups/orlando-js"
-              >
-                OrlandoJS
-              </a>
-              <a
-                className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
-                href="/groups/orlando-php"
-              >
-                Orlando PHP
-              </a>
-              <a
-                className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
-                href="/groups/codex"
-              >
-                Codex
-              </a>
-              {/* <a
-                className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
-                href="/groups/lady-devs"
-              >
-                Lady Devs
-              </a>
-              <a
-                className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
-                href="/groups/frontend-devs"
-              >
-                Frontend Devs
-              </a>
-              <a
-                className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
-                href="/groups/open-orlando"
-              >
-                Open Orlando
-              </a>
-              <a
-                className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
-                href="/groups/ios"
-              >
-                IOS
-              </a> */}
+              {activeGroups.map((group) => (
+                <a
+                  key={group.id}
+                  className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
+                  href={`/groups/${group.name.toLowerCase().replace(/ /g, "-")}`}
+                >
+                  {group.name}
+                </a>
+              ))}
               <a
                 className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
                 href="/groups"
@@ -130,14 +85,27 @@ function NavBar() {
           </div>
           <div
             className={`items-center hidden lg:flex lg:align-middle px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] ${
-              isActive("/slack") ? "text-[#65c6d7]" : "text-slate-200"
+              false // Discord is not a page, so never active
+                ? "text-[#65c6d7]"
+                : "text-slate-200"
             }`}
           >
-            <FaSlack style={{ color: "salmon" }} />
-            <a href="/slack" className="whitespace-nowrap pl-2">
-              Join Our Slack
+            <FaDiscord style={{ color: "#5865F2" }} />
+            <a
+              href="https://discord.com/invite/FKH9ADJn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whitespace-nowrap pl-2"
+            >
+              Join Our Discord
             </a>
           </div>
+          <a
+            href="/codeofconduct"
+            className="px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 font-bold bg-gradient-to-r from-white to-cyan-300 text-transparent bg-clip-text"
+          >
+            Code of Conduct
+          </a>
         </div>
       )}
 
@@ -185,10 +153,20 @@ function NavBar() {
             <a href="/groups" className="px-5 py-2">
               Groups
             </a>
-
-            <a href="/slack" className="flex items-center gap-2 px-5 py-2">
-              Join Our Slack
-              <FaSlack style={{ color: "salmon" }} />
+            <a
+              href="https://discord.com/invite/FKH9ADJn"
+              className="flex items-center gap-2 px-5 py-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join Our Discord
+              <FaDiscord style={{ color: "#5865F2" }} />
+            </a>
+            <a
+              href="/codeofconduct"
+              className="px-5 py-2 font-bold bg-gradient-to-r from-white to-cyan-300 text-transparent bg-clip-text"
+            >
+              Code of Conduct
             </a>
           </div>
         </motion.div>

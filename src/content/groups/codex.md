@@ -3,11 +3,11 @@ coordinators:
   [
     {
       name: "German Gamboa Gonzalez",
-      image: "/images/people/germangamboa.jpg",
+      image: "/images/people/germangamboa.png",
       connect: "https://www.linkedin.com/in/german-gamboa-gonzalez-a3863197/",
     },
   ]
-groupLogo: /images/groups/orlando-devs-logo.png
+groupLogo: /images/groups/codex.png
 title: Codex
 ---
 

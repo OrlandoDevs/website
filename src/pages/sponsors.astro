@@ -10,10 +10,19 @@ import { fade } from "astro:transitions";
     transition:animate={fade({ duration: "0.4s" })}
   >
     <h1
-      class="text-center text-4xl lg:text-5xl border-b-2 border-[#ABA1A1] py-3 bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"
+      class="text-center text-4xl lg:text-5xl border-b-2 border-[#ABA1A1] py-3 bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text mt-10"
+    
+    >
+      Our Current Sponsors:
+    </h2>
+    <div class="flex flex-col gap-y-8 py-10">
+      <SponsorList />
+    </div>
+    <h1
+      class="text-center text-3xl lg:text-4xl mt-2 mb-10 bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"
     >
       Interested In Becoming a Sponsor?
-    </h1>
+    </h2>
     <p class="text-xl text-slate-100 text-center mt-6">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit reiciendis
       similique, expedita ex, ipsa architecto quisquam maxime, minus ducimus
@@ -32,13 +41,5 @@ import { fade } from "astro:transitions";
       odio rem numquam nobis. Sunt nemo quas incidunt rem? A natus maiores
       voluptatem beatae aliquid earum sapiente explicabo sequi eius distinctio.
     </p>
-    <h2
-      class="text-center text-3xl lg:text-4xl mt-10 bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"
-    >
-      Our Current Sponsors:
-    </h2>
-    <div class="flex flex-col gap-y-8 py-10">
-      <SponsorList />
-    </div>
   </div>
 </MainLayout>

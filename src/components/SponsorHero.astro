@@ -3,53 +3,51 @@ import { shuffleArray } from "../utils/shuffleArray";
 import sponsorData from "../data/sponsors.json";
 import type SponsorProps from "../interfaces/SponsorInterfaces";
 const sponsors: SponsorProps[] = sponsorData.sponsors;
-const shuffledSponsors = shuffleArray(sponsors);
+const sortedSponsors = sponsors.slice().sort((a, b) => a.id - b.id);
+const sponsorCount = sortedSponsors.length;
 ---
 
-<div class="py-16 relative lg:my-32">
+<div class="py-8 relative lg:my-16">
   <h2
-    class="text-center text-5xl font-bold pb-5 mb-10 lg:mb-32 bg-gradient-to-r from-white to-cyan-300 text-transparent bg-clip-text"
+    class="text-center text-3xl lg:text-4xl border-b border-[#ABA1A1] py-2 bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text mt-4 font-bold mb-6"
   >
-    Thank you to our community sponsors!
+    Our Current Sponsors:
   </h2>
-  <div
-    class="lg:bg-[#2C9DB1] lg:h-20 hidden lg:block lg:w-20 lg:p-5 lg:absolute lg:-top-2 lg:right-48"
-  >
-    <img src="images/message-heart-square.svg" />
+  <div class="flex flex-col gap-y-4 py-6 items-center">
+    <div
+      class="grid grid-cols-[150px_150px] gap-4 lg:grid-cols-[200px_200px_200px] lg:grid-rows-[200px_200px_200px] justify-center justify-items-stretch items-stretch w-full"
+    >
+      {
+        sortedSponsors.map((sponsor, idx) => {
+          // Center the last row if 7 or 8 sponsors
+          let extraClass = "";
+          if (sponsorCount === 7 && idx === 6) {
+            extraClass = "lg:col-start-2";
+          } else if (sponsorCount === 8 && (idx === 6 || idx === 7)) {
+            extraClass = "col-span-1 lg:col-start-2";
+          }
+          return (
+            <div
+              data-id={sponsor.id}
+              class={`rounded-xl bg-white shadow-xl shadow-slate-700 flex flex-col items-center justify-center p-4 ${extraClass}`}
+            >
+              <a href={sponsor.link} target="_blank" class="relative block group w-full h-full">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-black text-base font-medium opacity-0 transition-opacity group-hover:opacity-100 z-10 duration-500 ease-in-out px-4 text-center pointer-events-none">
+                  <span class="text-lg font-bold mb-2">{sponsor.name}</span>
+                  <span class="text-xs leading-snug">{sponsor.description}</span>
+                </div>
+                <figure class="px-3 py-3 flex items-center justify-center">
+                  <img
+                    src={sponsor.image}
+                    alt={sponsor.name}
+                    class="object-contain w-full h-40 transition-all group-hover:filter group-hover:grayscale-[70%] group-hover:blur-xl duration-700"
+                  />
+                </figure>
+              </a>
+            </div>
+          );
+        })
+      }
+    </div>
   </div>
-  <div
-    class="grid grid-cols-[150px_150px] gap-5 lg:grid-cols-[200px_200px_200px] lg:grid-rows-[200px_200px_200px] justify-center justify-items-stretch items-stretch"
-  >
-    {
-      shuffledSponsors.map((sponsor) => (
-        <div
-          data-id={sponsor.id}
-          class="rounded-sm bg-slate-200 shadow-xl shadow-slate-700"
-        >
-          <a href={sponsor.link} target="_blank" class="relative block group">
-            <p class="absolute inset-0 flex items-center justify-center text-black text-2xl font-bold opacity-0 transition-opacity group-hover:opacity-100 z-10 duration-700 ease-in-out">
-              {sponsor.name}
-            </p>
-            <figure class="px-3 py-3">
-              <img
-                src={sponsor.image}
-                alt={sponsor.name}
-                class="object-contain w-full h-40 transition-all group-hover:filter group-hover:grayscale-[70%] group-hover:blur-xl duration-700"
-              />
-            </figure>
-          </a>
-        </div>
-      ))
-    }
-  </div>
-  <div
-    class="lg:bg-[#0E5F7C] hidden lg:block lg:h-40 lg:w-40 lg:p-5 lg:absolute lg:-top-72 lg:left-24"
-  >
-    <img src="images/Icon.svg" class="lg:absolute lg:top-8 lg:left-8" />
-  </div>
-  <img
-    src="/images/Rings.svg"
-    alt="svg"
-    class="lg:-bottom-40 lg:w-2/3 absolute -z-10 lg:right-0 hidden lg:block"
-  />
 </div>

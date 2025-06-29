@@ -29,6 +29,14 @@ const events = await getCollection("events");
 const groupEvents = events.filter(
   (event) => event.data.groupName === group.data.title,
 );
+const currentDate = new Date();
+const upcomingGroupEvents = groupEvents.filter((event) => {
+  const eventDate = new Date(event.data.date);
+  return eventDate > currentDate ||
+    (eventDate.getFullYear() === currentDate.getFullYear() &&
+      eventDate.getMonth() === currentDate.getMonth() &&
+      eventDate.getDate() === currentDate.getDate());
+});
 ---
 
 <MainLayout title={group.data.title}>
@@ -47,7 +55,14 @@ const groupEvents = events.filter(
     <div
       class="flex flex-col justify-center items-center lg:flex-row lg:justify-evenly my-20 gap-8"
     >
-      {(<EventList events={groupEvents} />)}
+      {upcomingGroupEvents.length > 0 ? (
+        <EventList events={groupEvents} />
+      ) : (
+        <div class="flex flex-col items-center justify-center bg-[#0E5F7C] bg-opacity-20 rounded-xl shadow-lg text-slate-200 shadow-slate-800 h-80 w-80 p-6">
+          <img src="/images/events/coming-soon.png" alt="Coming Soon" class="h-32 mb-4 mx-auto" />
+          <span class="text-2xl font-semibold mt-2 text-center w-full">More Events are Coming Soon</span>
+        </div>
+      )}
     </div>
     <h2 class="text-center text-4xl mb-6 underline">Coordinators:</h2>
     <div class="flex flex-col lg:flex-row justify-center gap-8 mb-10">
