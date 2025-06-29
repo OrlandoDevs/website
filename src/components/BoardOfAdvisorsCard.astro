@@ -1,7 +1,9 @@
 ---
 import advisorsData from "../data/boardOfAdvisors.json";
 import type BoardOfAdvisorsProps from "../interfaces/BoardOfAdvisorsInterfaces";
-const advisors: BoardOfAdvisorsProps[] = advisorsData.advisors;
+const advisors: BoardOfAdvisorsProps[] = advisorsData.advisors.slice().sort(
+  (a, b) => a.id - b.id
+);
 ---
 
 {

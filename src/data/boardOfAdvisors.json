@@ -8,57 +8,57 @@
     },
     {
       "id": 2,
-      "name": "Austin Musice",
-      "image": "/images/people/male-image-placeholder.jpg",
-      "role": "VP of App Development and Product at Echelon Fitness."
-    },
-    {
-      "id": 3,
       "name": "David Khourshid",
       "image": "/images/people/davidkhourshid.jpg",
       "role": "Founder at Stately"
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Dwane Hemmings",
       "image": "/images/people/dwanehemmings.jpg",
       "role": "JavaScript Developer Advocate"
     },
     {
-      "id": 5,
+      "id": 4,
       "name": "Brian Shacklett",
       "image": "/images/people/brianshacklett.jpg",
       "role": "Principal Consultant at Slalom"
     },
     {
-      "id": 6,
+      "id": 5,
       "name": "German Gamboa",
       "image": "/images/people/germangamboa.png",
       "role": "Senior Software Engineer at OLO inc"
     },
     {
-      "id": 7,
+      "id": 6,
       "name": "Rajiv Menon",
       "image": "/images/people/rajivmenon.jpg",
       "role": "CEO, Informulate"
     },
     {
-      "id": 8,
+      "id": 7,
       "name": "Jenny Truong",
       "image": "/images/people/jennytruong.jpg",
       "role": "Head of Operations at Stately.ai"
     },
     {
-      "id": 9,
+      "id": 8,
       "name": "Christopher Pecoraro",
       "image": "/images/people/chrispecoraro.jpg",
       "role": "Director of Web Development at Rollins College"
     },
     {
-      "id": 10,
+      "id": 9,
       "name": "Mike Butler",
       "image": "/images/people/mikebutler.jpg",
       "role": "Principled Sales Engineer at Progress Chef"
+    },
+    {
+      "id": 10,
+      "name": "Austin Musice",
+      "image": "/images/people/austinmusice.jpg",
+      "role": "VP of App Development and Product at Echelon Fitness."
     },
     {
       "id": 11,
@@ -66,10 +66,11 @@
       "image": "/images/people/willgorman.jpg",
       "role": "CTO at Nucleus Security"
     },
-    { 
+    {
       "id": 12,
       "name": "Nick Walsh",
       "image": "/images/people/nickwalsh.jpg",
-      "role": "Principal at Envy Labs"}
+      "role": "Principal at Envy Labs"
+    }
   ]
 }

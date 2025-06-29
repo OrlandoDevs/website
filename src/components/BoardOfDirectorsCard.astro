@@ -2,7 +2,7 @@
 import boardOfDirectorsData from "../data/boardOfDirectors.json";
 import type BoardOfDirectorsProps from "../interfaces/BoardOfDirectorsInterfaces";
 const boardOfDirectors: BoardOfDirectorsProps[] =
-  boardOfDirectorsData.boardDirectors;
+  boardOfDirectorsData.boardDirectors.slice().sort((a, b) => a.id - b.id);
 import { FaLinkedin } from "react-icons/fa";
 ---
 

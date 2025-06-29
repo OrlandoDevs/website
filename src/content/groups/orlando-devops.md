@@ -35,4 +35,4 @@ The Orlando DevOps Community Group is a welcoming bunch of DevOps Enthusiasts in
 
 You can [Join our LinkedIn Group](https://www.linkedin.com/groups/12876376/), our [Meetup Group](https://www.meetup.com/Orlando-DevOps/) and we post all events on the [Odevs Eventbrite](https://www.eventbrite.com/o/orlando-devs-15266001174), so follow us there.
 
-We are always active on [Slack](https://orlandodevs.com/slack), so come join in the fun!
+We are always active on [Discord](https://discord.gg/RVYQtGNE), so come join in the fun!

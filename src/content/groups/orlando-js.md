@@ -12,7 +12,7 @@ coordinators:
       connect: "https://www.linkedin.com/in/davidkpiano/",
     },
   ]
-groupLogo: /images/groups/orlando-devs-logo.png
+groupLogo: /images/groups/JavaScript.png
 title: Orlando JS
 ---
 

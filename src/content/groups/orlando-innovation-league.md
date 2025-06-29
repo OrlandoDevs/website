@@ -7,7 +7,7 @@ coordinators:
       connect: "https://www.linkedin.com/in/rajivrmenon/",
     },
   ]
-groupLogo: /images/groups/orlando-devs-logo.png
+groupLogo: /images/groups/orlando_innovation_league_logo.jpg
 title: Orlando Innovation League
 ---
 

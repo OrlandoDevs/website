@@ -1,10 +1,11 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import { getCollection } from "astro:content";
-import GroupList from "../components/GroupList.astro";
 import { fade } from "astro:transitions";
+import groupsData from "../data/groups.json";
 
-const groups = await getCollection("groups");
+const activeGroups = groupsData.groups
+  .filter((g) => g.state === "active")
+  .sort((a, b) => a.id - b.id);
 ---
 
 <MainLayout title="Groups">
@@ -17,6 +18,31 @@ const groups = await getCollection("groups");
     >
       Groups
     </h1>
-    <GroupList groups={groups} />
+    <div class="grid grid-cols-2 gap-x-16 gap-y-8 lg:gap-y-14 max-md:grid-cols-1 mb-24">
+      {activeGroups.map((group) => (
+        <div>
+          <div class="flex flex-col text-center justify-center items-center rounded-xl shadow-lg text-slate-200 shadow-slate-800 h-full bg-[#0E5F7C] bg-opacity-20 overflow-hidden min-h-[400px]">
+            <a
+              href={`/groups/${group.name.toLowerCase().replace(/ /g, "-")}`}
+              class="text-5xl text-slate-200 font-semibold inline-block my-8"
+            >
+              <h2>{group.name}</h2>
+            </a>
+            {group.logo && (
+              <img
+                src={group.logo}
+                alt={group.name}
+                class="rounded-2xl shadow-xl mb-8 object-contain h-48 max-w-[270px] w-full bg-white p-4"
+              />
+            )}
+            <div class="flex-1 flex flex-col justify-end w-full">
+              <p class="text-slate-300 text-lg lg:text-2xl line-clamp-2 mb-6 px-8 w-full text-left text-ellipsis overflow-hidden min-h-[48px]">
+                {group.description || "\u00A0"}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   </div>
 </MainLayout>

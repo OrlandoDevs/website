@@ -2,51 +2,87 @@
   "groups": [
     {
       "id": 1,
-      "name": "Orlando Devs"
+      "name": "Orlando Devs",
+      "state": "active",
+      "logo": "/images/groups/orlando-devs-logo.png",
+      "description": "The Orlando Devs meetup is the largest developer meetup in the Central Florida area. Every month we bring together a large and diverse group of developers of all skill levels to learn about new technologies, build their career and network."
     },
     {
       "id": 2,
-      "name": "Orlando DevOps"
+      "name": "Accelerate Orlando",
+      "state": "active",
+      "logo": "/images/groups/accelerate-orlando.png",
+      "description": "Accelerate Orlando is a new local group focused on principles from the techno-optimist and e/acc movements. Effective accelerationism (e/acc) is a 21st-century philosophical movement that advocates for an explicitly pro-technology stance. We believe that unrestricted technological progress (especially driven by artificial intelligence) is a solution to universal human problems like poverty, war and climate change. We see ourselves as a counterweight to more cautious views on technological innovation, often giving their opponents the derogatory labels of 'doomers' or 'decels'."
     },
     {
       "id": 3,
-      "name": "Orlando Innovation League"
+      "name": "Codex",
+      "state": "active",
+      "logo": "/images/groups/codex.png",
+      "description": "We provide talks and workshops to help junior developers grow their skill set and enter the workforce."
     },
     {
       "id": 4,
-      "name": "OrlandoJS"
+      "name": "Frontend Devs",
+      "state": "inactive",
+      "logo": "/images/groups/orlando-devs-logo.png",
+      "description": ""
     },
     {
       "id": 5,
-      "name": "Orlando PHP"
-    },
-    {
-      "id": 6,
-      "name": "Accelerate Orlando"
+      "name": "Lady Devs",
+      "state": "active",
+      "logo": "/images/groups/lady-devs.jpg",
+      "description": "Lady Devs is a group dedicated to supporting and empowering women in technology in the Orlando area. We welcome women of all backgrounds and skill levels to join us for networking, learning, and community building events."
     },
     {
       "id": 7,
-      "name": "Orlando Ruby"
+      "name": "Orlando Innovation League",
+      "state": "active",
+      "logo": "/images/groups/orlando_innovation_league_logo.jpg",
+      "description": "We are an ambitious group of founders, enterprise leaders, investors, mentors, technologists, and innovation leaders. Join us for shared experiences around innovation - whether it is Design Thinking, Agile, or Data-driven decision making - in any domain."
+    },
+    {
+      "id": 6,
+      "name": "Orlando DevOps",
+      "state": "active",
+      "logo": "/images/groups/orlando-devops.jpg",
+      "description": "The Orlando DevOps Community Group is a welcoming bunch of DevOps Enthusiasts in the Greater Orlando Area. We generally meet twice a month, the first Thursday is Lean DevOps (Coffee) and other Social functions and the Third Thursday where this year we are diving into the 'Year of DevOps', going through the famous infinity loop!"
     },
     {
       "id": 8,
-      "name": "Orlando UX"
+      "name": "Orlando JS",
+      "state": "active",
+      "logo": "/images/groups/JavaScript.png",
+      "description": "The Orlando JavaScript group is a place to talk about all things JavaScript. Our mission is to facilitate networking of professionals and enthusiasts. We hold monthly meetups on various topics around the JavaScript ecosystem. ALL LEVELS ARE WELCOME, especially those who are just getting started with coding and would like to learn more about the software industry."
     },
     {
       "id": 9,
-      "name": "Codex"
+      "name": "Orlando PHP",
+      "state": "active",
+      "logo": "/images/groups/orlando-php.jpg",
+      "description": "The Orlando PHP Meetup is open to anyone excited about or wanting to learn more about the PHP programming language. PHP is used as a foundation for web frameworks such as Laravel and Symfony, as well as content management systems (CMSs) such as WordPress and Drupal. It is ubiquitously used in modern web application development. We meet periodically and provide expert talks, a friendly social atmosphere, snacks and refreshments, and networking opportunities. All skill levels are welcome; students and learners are encouraged to attend."
     },
     {
-      "id": 810,
-      "name": "Lady Devs"
+      "id": 10,
+      "name": "Orlando Ruby",
+      "state": "inactive",
+      "logo": "/images/groups/orlando-devs-logo.png",
+      "description": ""
     },
     {
       "id": 11,
-      "name": "Frontend Devs"
+      "name": "Orlando UX",
+      "state": "inactive",
+      "logo": "/images/groups/orlando-devs-logo.png",
+      "description": ""
     },
     {
       "id": 12,
-      "name": "Open Orlando"
+      "name": "Open Orlando",
+      "state": "inactive",
+      "logo": "/images/groups/orlando-devs-logo.png",
+      "description": ""
     }
   ]
 }

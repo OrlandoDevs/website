@@ -18,11 +18,11 @@ Thank you for your interest in improving the Orlando Devs website! This is an op
 
 ## Group Administration
 
-If you are a group admin and want to make an update to your group's profile, clone the repo and edit your group file under `website/src/content/groups/your-group.md`. Include or omit as much as you feel necessary. 
+If you are a group admin and want to make an update to your group's profile, clone the repo and edit your group file under `website/src/content/groups/your-group.md`. Include or omit as much as you feel necessary.
 
 ## Event Administration
 
-If you wish to add a new event, please check out the repository and make a new branch with the name of your event. Run the `new-event.sh` or `new-event.ps` script according to your operating system, proving the name and date of the event. For example, `./new-event.sh 2023-11-21 'My Event Name'"`. This will create a new file in `src/content/events/` with the date and name of your event. Fill out all the necessary information and remove whatever is not. Commit the new file and open a pull request to the main branch. 
+If you wish to add a new event, please check out the repository and make a new branch with the name of your event. Run the `new-event.sh` or `new-event.ps` script according to your operating system, proving the name and date of the event. For example, `./new-event.sh 2023-11-21 'My Event Name'"`. This will create a new file in `src/content/events/` with the date and name of your event. Fill out all the necessary information and remove whatever is not. Commit the new file and open a pull request to the main branch.
 
 ### Troubleshooting new-event.sh|.ps1
 
