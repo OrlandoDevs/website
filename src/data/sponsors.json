@@ -16,17 +16,17 @@
     },
     {
       "id": 3,
-      "name": "Stax",
-      "description": "Stax empowers software platforms, small businesses, and large businesses, through simplified, industry-leading integrated payment and recurring billing solutions.",
-      "link": "https://staxpayments.com/",
-      "image": "/images/sponsors/stax-logo.svg"
-    },
-    {
-      "id": 4,
       "name": "Worth AI",
       "description": "Streamline your operations with platform consolidation for faster approvals, enhanced compliance, and smarter risk management.",
       "link": "https://worthai.com/",
       "image": "/images/sponsors/worth-logo-black.svg"
+    },
+        {
+      "id": 4,
+      "name": "PETE",
+      "description": "PETE empowers your company to create Fast, Efficient, and Personalized Training.",
+      "link": "https://pete.com/",
+      "image": "/images/sponsors/pete-logo.svg"
     },
     {
       "id": 5,
@@ -37,10 +37,10 @@
     },
     {
       "id": 6,
-      "name": "Conduit",
-      "description": "An interdisciplinary society of individuals who believe that their work and lives get better when they come alongside each other.",
-      "link": "https://www.credoconduit.com/",
-      "image": "/images/sponsors/conduit-logo.svg"
+      "name": "Orlando Tech Community",
+      "description": "OTC offers you the opportunity to forge connections with regional leaders and engage with OTC members to help fuel Orlando's tech landscape.",
+      "link": "https://innovateorlando.io/otc/",
+      "image": "/images/sponsors/orlandotech-community-logo.svg"
     },
     {
       "id": 7,

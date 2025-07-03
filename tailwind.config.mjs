@@ -14,6 +14,23 @@ export default {
         "custom-back-ground": "url('/images/pattern-randomized.svg')",
         "custom-back-ground-two": "url('/images/pattern-randomized-two.svg')",
       },
+      colors: {
+        gray: {
+          DEFAULT: '#C9C9CB',
+        },
+        'light-blue': {
+          DEFAULT: '#739DB3',
+        },
+        'medium-blue': {
+          DEFAULT: '#0A3754',
+        },
+        'dark-blue': {
+          DEFAULT: '#0A2C48',
+        },
+        white: {
+          DEFAULT: '#FFFFFF',
+        },
+      },
     },
   },
   plugins: [require("daisyui"), require("@tailwindcss/typography")],

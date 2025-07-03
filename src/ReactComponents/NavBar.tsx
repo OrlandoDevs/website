@@ -18,21 +18,21 @@ function NavBar() {
     .sort((a, b) => a.id - b.id);
 
   return (
-    <nav className="relative flex w-full items-center justify-between h-20 px-4 lg:px-10">
+    <nav className="relative flex w-full items-center justify-between h-20 px-4 lg:px-10 bg-dark-blue">
       <div className="flex items-center transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300">
         <img src="/images/footer-odev.png" alt="Odevs" className="h-14" />
         <a
-          className="btn btn-ghost text-3xl lg:text-5xl bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text"
+          className="btn btn-ghost text-3xl lg:text-5xl bg-gradient-to-r from-light-blue to-white text-transparent bg-clip-text"
           href="/"
         >
           Orlando Devs
         </a>
       </div>
       {matches && (
-        <div className="flex gap-4 items-center text-2xl font-bold text-slate-200">
+        <div className="flex gap-4 items-center font-bold text-gray text-base md:text-lg lg:text-xl xl:text-2xl">
           <div
-            className={`items-center hidden lg:flex lg:items-center px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] ${
-              isActive("/events") ? "text-[#65c6d7]" : "text-slate-200"
+            className={`items-center hidden lg:flex lg:items-center px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-light-blue ${
+              isActive("/events") ? "text-light-blue" : "text-gray"
             }`}
           >
             <FcCalendar />
@@ -42,41 +42,33 @@ function NavBar() {
           </div>
           <a
             href="/about"
-            className={`px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] ${
-              isActive("/about") ? "text-[#65c6d7]" : "text-slate-200"
+            className={`px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-light-blue ${
+              isActive("/about") ? "text-light-blue" : "text-gray"
             }`}
           >
             About Us
           </a>
-          <a
-            href="/sponsors"
-            className={`px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] ${
-              isActive("/sponsors") ? "text-[#65c6d7]" : "text-slate-200"
-            }`}
-          >
-            Sponsors
-          </a>
           <div className="dropdown">
             <div
-              className={`flex items-center px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] ${
-                isActive("/groups") ? "text-[#65c6d7]" : "text-slate-200"
+              className={`flex items-center px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-light-blue ${
+                isActive("/groups") ? "text-light-blue" : "text-gray"
               }`}
             >
               <button className="dropbtn">Groups</button>
               <FaCaretDown />
             </div>
-            <div className="dropdown-content flex flex-col items-center text-center bg-[#011C28] rounded-box z-[1] shadow text-slate-200 font-bold text-xl p-4 cursor-pointer mt-5 w-auto gap-2">
+            <div className="dropdown-content flex flex-col items-center text-center bg-medium-blue rounded-box z-[1] shadow text-gray font-bold text-xl p-4 cursor-pointer mt-5 w-auto gap-2">
               {activeGroups.map((group) => (
                 <a
                   key={group.id}
-                  className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
+                  className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-light-blue text-nowrap"
                   href={`/groups/${group.name.toLowerCase().replace(/ /g, "-")}`}
                 >
                   {group.name}
                 </a>
               ))}
               <a
-                className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] text-nowrap"
+                className="py-1 px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-light-blue text-nowrap"
                 href="/groups"
               >
                 View All
@@ -84,10 +76,10 @@ function NavBar() {
             </div>
           </div>
           <div
-            className={`items-center hidden lg:flex lg:align-middle px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#65c6d7] ${
+            className={`items-center hidden lg:flex lg:align-middle px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-light-blue ${
               false // Discord is not a page, so never active
-                ? "text-[#65c6d7]"
-                : "text-slate-200"
+                ? "text-light-blue"
+                : "text-gray"
             }`}
           >
             <FaDiscord style={{ color: "#5865F2" }} />
@@ -97,12 +89,12 @@ function NavBar() {
               rel="noopener noreferrer"
               className="whitespace-nowrap pl-2"
             >
-              Join Our Discord
+              Join Discord
             </a>
           </div>
           <a
             href="/codeofconduct"
-            className="px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 font-bold bg-gradient-to-r from-white to-cyan-300 text-transparent bg-clip-text"
+            className="px-1 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-300 font-bold bg-gradient-to-r from-white to-light-blue text-transparent bg-clip-text"
           >
             Code of Conduct
           </a>
@@ -147,9 +139,6 @@ function NavBar() {
               Events
               <FcCalendar />
             </a>
-            <a href="/sponsors" className="px-5 py-2">
-              Sponsors
-            </a>
             <a href="/groups" className="px-5 py-2">
               Groups
             </a>
@@ -159,12 +148,12 @@ function NavBar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Join Our Discord
+              Join Discord
               <FaDiscord style={{ color: "#5865F2" }} />
             </a>
             <a
               href="/codeofconduct"
-              className="px-5 py-2 font-bold bg-gradient-to-r from-white to-cyan-300 text-transparent bg-clip-text"
+              className="px-5 py-2 font-bold bg-gradient-to-r from-white to-light-blue text-transparent bg-clip-text"
             >
               Code of Conduct
             </a>

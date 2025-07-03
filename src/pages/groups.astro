@@ -10,21 +10,21 @@ const activeGroups = groupsData.groups
 
 <MainLayout title="Groups">
   <div
-    class="p-6 mb-7 text-slate-300 text-xl mx-6"
+    class="p-6 mb-7 text-gray text-xl mx-6"
     transition:animate={fade({ duration: "0.4s" })}
   >
     <h1
-      class="bg-gradient-to-r from-cyan-300 to-white text-transparent bg-clip-text text-4xl lg:text-5xl text-center border-b-2 border-solid border-[#ABA1A1] lg:mt-10 mb-20 pb-4"
+      class="bg-gradient-to-r from-light-blue to-white text-transparent bg-clip-text text-4xl lg:text-5xl text-center border-b-2 border-solid border-gray lg:mt-10 mb-20 pb-4"
     >
       Groups
     </h1>
     <div class="grid grid-cols-2 gap-x-16 gap-y-8 lg:gap-y-14 max-md:grid-cols-1 mb-24">
       {activeGroups.map((group) => (
         <div>
-          <div class="flex flex-col text-center justify-center items-center rounded-xl shadow-lg text-slate-200 shadow-slate-800 h-full bg-[#0E5F7C] bg-opacity-20 overflow-hidden min-h-[400px]">
+          <div class="flex flex-col text-center justify-center items-center rounded-xl shadow-lg text-gray shadow-dark-blue h-full bg-light-blue bg-opacity-20 overflow-hidden min-h-[400px]">
             <a
               href={`/groups/${group.name.toLowerCase().replace(/ /g, "-")}`}
-              class="text-5xl text-slate-200 font-semibold inline-block my-8"
+              class="text-5xl text-gray font-semibold inline-block my-8"
             >
               <h2>{group.name}</h2>
             </a>
@@ -36,7 +36,7 @@ const activeGroups = groupsData.groups
               />
             )}
             <div class="flex-1 flex flex-col justify-end w-full">
-              <p class="text-slate-300 text-lg lg:text-2xl line-clamp-2 mb-6 px-8 w-full text-left text-ellipsis overflow-hidden min-h-[48px]">
+              <p class="text-gray text-lg lg:text-2xl line-clamp-2 mb-6 px-8 w-full text-left text-ellipsis overflow-hidden min-h-[48px]">
                 {group.description || "\u00A0"}
               </p>
             </div>
