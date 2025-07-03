@@ -50,6 +50,6 @@ By participating, you agree to abide by our [Code of Conduct](./src/pages/codeof
 ## Need Help?
 
 - Open an issue in the repository if you have questions or need guidance.
-- Join our [Discord](https://discord.com/invite/FKH9ADJn) for real-time help from the community.
+- Join our [Discord](https://discord.com/invite/GGGKZDDtSz) for real-time help from the community.
 
 Thank you for helping make Orlando Devs better!

@@ -84,7 +84,7 @@ function NavBar() {
           >
             <FaDiscord style={{ color: "#5865F2" }} />
             <a
-              href="https://discord.com/invite/FKH9ADJn"
+              href="https://discord.com/invite/GGGKZDDtSz"
               target="_blank"
               rel="noopener noreferrer"
               className="whitespace-nowrap pl-2"
@@ -143,7 +143,7 @@ function NavBar() {
               Groups
             </a>
             <a
-              href="https://discord.com/invite/FKH9ADJn"
+              href="https://discord.com/invite/GGGKZDDtSz"
               className="flex items-center gap-2 px-5 py-2"
               target="_blank"
               rel="noopener noreferrer"
